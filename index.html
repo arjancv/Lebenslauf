@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arjan Hoxha – Technischer Produktdesigner</title>
+<meta name="description" content="Arjan Hoxha – Technischer Produktdesigner (IHK) aus Krefeld. Berufserfahrung in CAD-Konstruktion, NX und Teamcenter sowie laufendes Maschinenbaustudium.">
+<meta name="theme-color" content="#07152b">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307152b'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23ffdc55'%3EAH%3C/text%3E%3C/svg%3E">
+<link rel="preload" href="fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+/* ===== 0. Schriften (lokal gehostet, Lizenz: SIL OFL, siehe fonts/) ===== */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/inter-cyrillic-400-normal.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/inter-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("fonts/inter-latin-400-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/inter-cyrillic-500-normal.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/inter-latin-ext-500-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/inter-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/inter-cyrillic-600-normal.woff2") format("woff2"); unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/inter-latin-ext-600-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("fonts/inter-latin-600-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/space-grotesk-latin-ext-500-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 500; font-display: swap; src: url("fonts/space-grotesk-latin-500-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/space-grotesk-latin-ext-700-normal.woff2") format("woff2"); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: "Space Grotesk"; font-style: normal; font-weight: 700; font-display: swap; src: url("fonts/space-grotesk-latin-700-normal.woff2") format("woff2"); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+/* ===== 1. Variablen & Basis ===== */
+:root {
+  color-scheme: dark;
+  --bg: #07152b;
+  --surface: #0d2141;
+  --text: #f4f7fb;
+  --muted: #b7c4d8;
+  --line: #263d60;
+  --accent: #ffdc55;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: linear-gradient(180deg, rgba(31, 63, 99, .28) 0%, rgba(7, 21, 43, 0) 55%, rgba(2, 9, 20, .18) 100%), linear-gradient(rgba(151, 178, 215, .045) 1px, transparent 1px), linear-gradient(90deg, rgba(151, 178, 215, .045) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+  background-attachment: fixed;
+  color: var(--text);
+  font: 400 16px/1.65 Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+h1, h2, h3 {
+  margin: 0;
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  line-height: 1.15;
+}
+a { color: inherit; }
+.wrap { width: min(100% - 44px, 960px); margin-inline: auto; }
+
+/* ===== 2. Navigation ===== */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  inset-inline-start: 12px;
+  z-index: 20;
+  padding: 10px 14px;
+  border: 2px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
+}
+.skip-link:focus { top: 10px; }
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px);
+}
+nav .wrap {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  gap: clamp(12px, 2.2vw, 22px);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+nav a { padding: 8px 0; color: var(--muted); font-size: 14px; font-weight: 500; text-decoration: none; }
+nav a:hover, nav a.on { color: var(--accent); }
+#lang {
+  flex: 0 0 auto;
+  padding: 5px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: 600 13px Inter, system-ui, sans-serif;
+  cursor: pointer;
+}
+#lang:hover, #lang:focus-visible { border-color: #56d5ff; color: #56d5ff; }
+#lang:focus-visible { outline-color: #56d5ff; }
+#lang option { background: var(--surface); color: var(--text); }
+
+/* ===== 3. Hero & Kennzahlen ===== */
+.hero {
+  padding: clamp(36px, 6vw, 64px) 0 40px;
+}
+.hero-copy { min-width: 0; }
+.hero h1 { margin-bottom: 10px; font-size: clamp(28px, 4.2vw, 42px); letter-spacing: -.02em; white-space: nowrap; }
+.hero h1 span { color: var(--accent); }
+.hero p { max-width: 680px; margin: 0 0 20px; color: var(--muted); font-size: 17px; }
+.hero-contact a { color: var(--text); font-weight: 600; text-decoration: none; }
+.btn {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--surface);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform .18s, box-shadow .18s, border-color .18s;
+}
+.btn:hover { transform: translateY(-2px); border-color: var(--accent); box-shadow: 0 6px 20px color-mix(in srgb, var(--text) 10%, transparent); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 28px; }
+.stat, .card, .fold { box-shadow: 0 8px 24px color-mix(in srgb, var(--text) 4%, transparent); }
+.stat {
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.stat b { display: block; color: var(--accent); font: 700 30px "Space Grotesk", sans-serif; }
+.stat small { color: var(--muted); }
+
+/* ===== 4. Sektionen, Timeline & Karten ===== */
+section { padding: 42px 0; border-top: 1px solid var(--line); }
+section h2 { display: grid; grid-template-columns: max-content minmax(0, 1fr); align-items: center; column-gap: 12px; row-gap: 8px; margin-bottom: 22px; font-size: 28px; }
+.heading-icon { width: 27px; height: 27px; flex: 0 0 auto; color: var(--accent); }
+section h2::after { grid-column: 1 / -1; display: block; width: 38px; height: 3px; margin-inline-start: 39px; border-radius: 2px; background: var(--accent); content: ""; }
+.tl { margin-inline-start: 6px; padding-inline-start: 24px; border-inline-start: 2px solid var(--line); }
+.item { position: relative; margin-bottom: 20px; break-inside: avoid; }
+.item::before { position: absolute; top: 7px; inset-inline-start: -31px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 4px var(--bg); content: ""; }
+.item h3 { font-size: 19px; }
+.org-link { display: inline-flex; width: 24px; height: 24px; align-items: center; justify-content: center; margin-left: 7px; border: 1px solid var(--line); border-radius: 6px; color: var(--muted); vertical-align: middle; text-decoration: none; font: 600 16px/1 Inter, system-ui, sans-serif; transition: color .18s, border-color .18s, background .18s; }
+.org-link:hover { border-color: var(--accent); background: var(--accent); color: #07152b; }
+.meta { margin: 3px 0 7px; color: var(--muted); font-size: 14px; }
+.item p { margin: 0; color: var(--muted); }
+.item p.deg { margin-bottom: 4px; color: var(--text); font-weight: 600; }
+.item ul, .card ul { margin: 6px 0 0; padding-inline-start: 19px; color: var(--muted); }
+.item li { margin: 3px 0; font-size: 14px; }
+.task-heading { margin: 12px 0 0; color: var(--text); font: 600 14px/1.3 "Space Grotesk", Inter, system-ui, sans-serif; }
+#persoenliches { padding: 36px 0; }
+#personal-details { margin-top: 12px; }
+.sub { margin-top: 12px; padding-inline-start: 14px; border-inline-start: 2px solid var(--line); }
+.sub .s { margin-bottom: 12px; }
+.sub h3 { font-size: 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.card { padding: 16px; border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 14px; background: var(--surface); }
+.card h3 { display: flex; align-items: center; gap: 8px; margin-bottom: 9px; font-size: 16px; }
+.card-icon { width: 20px; height: 20px; flex: 0 0 auto; color: var(--accent); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { padding: 4px 9px; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); font-size: 13px; }
+.skill-category + .skill-category { margin-top: 12px; }
+.skill-category-title { margin: 0 0 6px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: .035em; text-transform: uppercase; }
+.kv-row { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 15px; }
+.kv-row:last-child { border: 0; }
+.kv-row span:last-child { color: var(--muted); }
+.kvs .kv-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: start; gap: 14px; }
+.kvs .kv-row span:last-child { text-align: end; }
+.kvs-note { margin: 10px 0 0; color: var(--muted); font-size: 13px; line-height: 1.45; }
+.personal-group { margin-top: 16px; padding: 14px 15px 8px; border: 1px solid var(--line); border-inline-start: 3px solid var(--accent); border-radius: 10px; background: color-mix(in srgb, var(--surface) 72%, var(--bg)); }
+.personal-group h3 { margin-bottom: 4px; color: var(--text); font: 700 16px/1.3 "Space Grotesk", Inter, sans-serif; }
+.personal-group .kvs-note { margin: 0 0 5px; }
+
+/* ===== 5. Aufklapp-Bereiche ===== */
+.fold { padding: 0 16px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.fold.hobbies-fold { padding: 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+.fold summary { display: flex; align-items: center; gap: 11px; padding: 14px 0; font: 700 18px "Space Grotesk", Inter, sans-serif; cursor: pointer; list-style: none; }
+.fold summary .heading-icon { width: 22px; height: 22px; }
+.fold summary::-webkit-details-marker { display: none; }
+.fold > summary::after { margin-inline-start: auto; color: var(--accent); font-size: 26px; line-height: 1; content: "+"; }
+.fold[open] > summary::after { content: "−"; }
+.fold .chips { padding-bottom: 16px; }
+.fold .kvs { padding-bottom: 12px; }
+
+/* ===== 6. Footer & Fokus ===== */
+footer { padding: 22px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+.footer-row { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+footer a { text-decoration: none; }
+.legal-links { text-align: center; }
+footer a:hover { color: var(--accent); }
+a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ===== 7. Kontakt ===== */
+.contact-section { padding-top: 28px; background: color-mix(in srgb, var(--bg) 92%, #0b3156); }
+.contact-grid { display: grid; grid-template-columns: minmax(0, 1.38fr) minmax(260px, .62fr); align-items: start; row-gap: 18px; column-gap: clamp(24px, 4vw, 48px); }
+.contact-grid > h2 { grid-column: 1 / -1; margin-bottom: 0; }
+.contact-grid > h2::after { display: none; }
+.contact-panel { grid-column: 1; grid-row: 2; }
+.contact-copy { grid-column: 2; grid-row: 2; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.contact-photo-wrap { display: flex; flex-direction: column; align-items: center; width: 232px; max-width: 100%; justify-content: center; gap: 8px; margin-top: 22px; }
+.contact-photo-label { display: inline-flex; align-items: center; justify-content: center; gap: 7px; max-width: 100%; box-sizing: border-box; margin-top: 6px; padding: 8px 10px; border: 1px solid var(--accent); border-radius: 12px; background: color-mix(in srgb, var(--surface) 94%, var(--accent) 6%); color: var(--text); font-size: 14px; font-weight: 700; letter-spacing: .01em; line-height: 1.2; text-align: center; white-space: normal; }
+.contact-photo-label svg { width: 18px; height: 18px; flex: 0 0 auto; color: var(--accent); }
+.contact-profile-photo { display: block; width: 232px; height: 232px; max-width: 100%; border: 0; border-radius: 14px; object-fit: cover; object-position: center; box-shadow: none; }
+.contact-panel { padding: clamp(18px, 2.4vw, 26px); border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--surface); color: var(--text); box-shadow: 0 16px 44px rgba(0, 0, 0, .24); }
+.form-progress { display: flex; gap: 8px; margin: 0 0 18px; padding: 0; list-style: none; font-weight: 700; }
+.form-progress li { flex: 1; padding: 8px 10px; border-bottom: 4px solid var(--line); color: var(--muted); font-size: 14px; }
+.form-progress li.on { border-color: var(--accent); color: var(--accent); }
+.contact-form { display: grid; gap: 12px; }
+.contact-form fieldset { display: grid; gap: 12px; min-width: 0; padding: 0; border: 0; }
+.contact-form fieldset[hidden] { display: none; }
+.contact-form legend { margin-bottom: 2px; padding: 0; font: 800 20px/1.2 "Space Grotesk", Inter, sans-serif; }
+.contact-form label { display: grid; gap: 6px; font-weight: 600; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 11px 12px; border: 1px solid var(--line); border-radius: 7px; background: var(--bg); color: var(--text); font: inherit; }
+.contact-form textarea { min-height: 130px; resize: vertical; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--accent); outline: 2px solid var(--accent); outline-offset: 1px; }
+.form-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.contact-panel .btn { border: 1px solid var(--accent); background: var(--accent); color: #07152b; cursor: pointer; }
+.contact-panel .btn:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, .25); }
+.contact-panel .btn.secondary { border: 1px solid var(--line); background: var(--bg); color: var(--text); }
+.contact-panel .small { color: var(--muted); font-size: 14px; }
+.form-status:empty { display: none; }
+.form-status { padding: 10px 12px; border-inline-start: 4px solid var(--accent); background: var(--bg); color: var(--text); }
+.form-status.ok { border-color: #6fe3a1; }
+.form-status.err { border-color: #ff8a80; background: color-mix(in srgb, #b3261e 22%, var(--bg)); color: #ffd9d6; }
+.contact-panel .btn:disabled { opacity: .6; cursor: wait; transform: none; }
+
+/* ===== 8. Responsive ===== */
+@media (max-width: 900px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-panel { grid-column: auto; grid-row: 2; }
+  .contact-copy { grid-column: auto; grid-row: 3; }
+}
+@media (max-width: 620px) {
+  .wrap { width: min(100% - 36px, 960px); }
+  nav .wrap { height: 58px; gap: 16px; }
+    nav a { font-size: 13px; }
+  .hero p { font-size: 16px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; margin-top: 22px; }
+  .stat { padding: 10px 9px; }
+  .stat b { font-size: 25px; }
+  .stat small { display: block; font-size: 12px; line-height: 1.35; }
+  section { padding: 32px 0; }
+  section h2 { margin-bottom: 18px; font-size: 24px; }
+  .heading-icon { width: 24px; height: 24px; }
+  .grid { grid-template-columns: 1fr; }
+  .contact-grid, .form-row { grid-template-columns: 1fr; }
+  .fold { padding-inline: 16px; }
+  .kvs .kv-row { gap: 10px; }
+  }
+@media (max-width: 500px) {
+  .contact-photo-wrap { width: min(232px, 100%); }
+  .contact-profile-photo { width: 100%; height: auto; aspect-ratio: 1; }
+}
+
+/* ===== 9. Bewegung & Druck ===== */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
+}
+@media print {
+  :root { color-scheme: light; --bg: #fff; --surface: #fff; --text: #111; --muted: #444; --line: #bbb; --accent: #7a5c00; }
+  nav, .skip-link, .contact-panel { display: none; }
+  body { background: #fff; background-image: none; font-size: 11pt; line-height: 1.4; }
+  .wrap { width: 100%; }
+  .hero { padding: 12px 0 20px; }
+  .stats { margin-top: 20px; }
+  .stat, .card, .fold { box-shadow: none; }
+  section { padding: 18px 0; }
+  .item, .card, .stat { break-inside: avoid; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<nav aria-label="Hauptnavigation"><div class="wrap"><a href="#erfahrung">Werdegang</a><a href="#kompetenzen">Kompetenzen</a><a href="#ehrenamt">Ehrenamt</a><a href="#persoenliches">Persönliches</a><a href="#kontakt">Kontakt</a><select id="lang" translate="no" aria-label="Sprache wählen" title="Sprache wählen"><option value="de">Deutsch</option><option value="en">English</option><option value="fr">Français</option><option value="sq">Shqip</option><option value="it">Italiano</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="ja">日本語</option><option value="zh-Hans">简体中文</option><option value="ko">한국어</option><option value="ru">Русский</option><option value="tr">Türkçe</option></select></div></nav>
+
+<main id="main"><header class="hero"><div class="wrap">
+
+<div class="hero-copy">
+<h1>Arjan <span>Hoxha</span></h1>
+</div>
+
+<p>Diese Seite bietet einen Überblick über meinen beruflichen Werdegang, meine Qualifikationen und fachlichen Kompetenzen.</p><p class="hero-contact">Bei Fragen nutzen Sie bitte das <a href="#kontakt" class="hero-contact-link">Kontaktformular</a>.</p>
+
+<div class="stats">
+<div class="stat"><b data-years-since="2019-08-01">7+</b><small>Jahre Berufserfahrung</small></div>
+<div class="stat"><b data-years-since="2016-08-01">10+</b><small>Jahre Erfahrung in Metalltechnik und Maschinenbau</small></div>
+<div class="stat"><b>4</b><small>Sprachen</small></div>
+<div class="stat"><b>13+</b><small>Softwarekenntnisse</small></div>
+</div>
+</div></header>
+
+<section id="erfahrung"><div class="wrap">
+<h2><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="7" cy="7" r="4"/><path d="M7 4.8v2.4l1.5.9"/><path d="M3.5 20.5h4M5.5 20.5l4-4 3 2 5.5-7"/><path d="M15.5 11.5H18V14"/></svg><span>Werdegang</span></h2>
+<div class="tl">
+<div class="item"><h3>Hochschule Niederrhein <a class="org-link" href="https://www.hs-niederrhein.de/ingenieurwissenschaften-informatik/studieninteressierte/maschinenbau/#c529715" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zur Hochschule Niederrhein" title="Weitere Informationen zur Hochschule Niederrhein">↗</a></h3><div class="meta">Krefeld · laufendes Studium</div><p class="deg">Maschinenbau (B.Eng.) <a class="org-link" href="https://fb03.pages.ide3.de/curricula/bachelor-maschinenbau/studienverlauf.html" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zum Studienverlauf Maschinenbau" title="Weitere Informationen zum Studienverlauf Maschinenbau">↗</a></p></div>
+<div class="item"><h3>LINDEMANN Metal Recycling <a class="org-link" href="https://lindemann-metalrecycling.com/en/about-us/" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zu LINDEMANN Metal Recycling" title="Weitere Informationen zu LINDEMANN Metal Recycling">↗</a></h3><div class="meta">Düsseldorf · seit August 2019</div><p class="deg">Ausbildung zum Technischen Produktdesigner (IHK Düsseldorf) · Abschluss: Juni 2021</p><h4 class="task-heading">Aufgaben &amp; Schwerpunkte</h4><ul><li>Erstellung von Einzelteil-, Baugruppen-, Explosions- und Ersatzteilzeichnungen</li><li>Angebotslayouts für Shredderanlagen erstellen und konfigurieren (Einlauf, Maschine, Folgeprozesse, Auslauf)</li><li>Punktwolken bearbeiten, konvertieren und in die Siemens-NX-Umgebung importieren.</li><li>Pflege und Verwaltung von Konstruktionsdaten in Teamcenter Active Workspace</li><li>Einarbeitung neuer Kolleginnen und Kollegen in Teamcenter Active Workspace</li><li>Vertretung bei der Freigabe von Baugruppen in Teamcenter Active Workspace</li><li>Lizenzverwaltung (Vertretung): Teamcenter-Konten anlegen, NX-Lizenzen über Siemens Xcelerator zuweisen</li><li>Prüfung der Teamcenter-Attribute von Konstruktionsdaten und Übertragung der Daten in das ERP-System SAP</li></ul></div>
+
+<div class="item"><h3>Franz-Jürgens-Berufskolleg Düsseldorf <a class="org-link" href="https://www.tbkf.de/" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zum Franz-Jürgens-Berufskolleg" title="Weitere Informationen zum Franz-Jürgens-Berufskolleg">↗</a></h3><div class="meta">August 2016 – Juni 2019</div><p class="deg">Staatlich geprüfter maschinenbautechnischer Assistent mit Fachhochschulreife (Fachabitur) <a class="org-link" href="https://www.tbkf.de/maschinenbautechnische-assistentin-und-maschinenbautechnischer-assistent-mit-fachhochschulreife/#toggle-id-2-closed" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zum Bildungsgang am TBKF" title="Weitere Informationen zum Bildungsgang am TBKF">↗</a></p><p>Praxisanteile: CNC-Fräsen mit iTNC 530, konventionelles Drehen und Fräsen, Steuerungstechnik mit Siemens LOGO!, Pneumatik mit Festo FluidSIM sowie CAD mit Autodesk Inventor.</p>
+<div class="sub">
+<div class="s"><h3>Betriebspraktika im Bereich Metalltechnik</h3><div class="meta">Netzgesellschaft Düsseldorf mbH <a class="org-link" href="https://www.netz-duesseldorf.de/" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zur Netzgesellschaft Düsseldorf" title="Weitere Informationen zur Netzgesellschaft Düsseldorf">↗</a> · Oktober–November 2017 und 2018 · im Rahmen der schulischen Ausbildung</div><p>Praktische Tätigkeiten: Sägen, Feilen, Bohren, Blechbearbeitung, Kanten, Nieten, De- und Montage von Geländern, Straßenleuchten und -Pollern, Gewindeschneiden, Schmieden, MAG- und WIG-Schweißen, Wasserstrahl- und Sandstrahlarbeiten sowie das Auftragen von Korrosionsschutzbeschichtungen.</p></div>
+
+</div></div>
+
+<div class="item"><h3>Mittlerer Schulabschluss</h3><div class="meta">Fritz-Henkel-Schule Düsseldorf <a class="org-link" href="https://www.ge-stettinerstr.de/" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zur Fritz-Henkel-Schule Düsseldorf" title="Weitere Informationen zur Fritz-Henkel-Schule Düsseldorf">↗</a> · 2016</div></div>
+</div>
+</div></section>
+
+<section id="kompetenzen"><div class="wrap">
+<h2><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18M10 12v2h4v-2"/></svg><span>Kompetenzen</span></h2>
+<div class="grid">
+<div class="card"><h3><svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg><span>Software</span></h3><div class="chips"><span class="chip">NX Unigraphics</span><span class="chip">Teamcenter</span><span class="chip">AutoCAD Mechanical</span><span class="chip">SolidWorks</span><span class="chip">Autodesk Inventor</span><span class="chip">Nastran (Inventor)</span><span class="chip">Autodesk Revit</span><span class="chip">DraftSight</span><span class="chip">Blender</span><span class="chip">Adobe Premiere Pro</span><span class="chip">Adobe Photoshop</span><span class="chip">Adobe Acrobat</span><span class="chip">Microsoft Office</span></div></div>
+<div class="card"><h3><svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.47 4.2L10.17 2.58L13.83 2.58L14.53 4.2L15.72 4.69L17.37 4.04L19.96 6.63L19.31 8.28L19.8 9.47L21.42 10.17L21.42 13.83L19.8 14.53L19.31 15.72L19.96 17.37L17.37 19.96L15.72 19.31L14.53 19.8L13.83 21.42L10.17 21.42L9.47 19.8L8.28 19.31L6.63 19.96L4.04 17.37L4.69 15.72L4.2 14.53L2.58 13.83L2.58 10.17L4.2 9.47L4.69 8.28L4.04 6.63L6.63 4.04L8.28 4.69Z"/><circle cx="12" cy="12" r="3.1"/></svg><span>Fertigung und Steuerung</span></h3><div class="skill-category"><h4 class="skill-category-title">Zerspanung</h4><div class="chips"><span class="chip">CNC-Fräsen (iTNC 530)</span><span class="chip">Konventionelles Drehen</span><span class="chip">Konventionelles Fräsen</span><span class="chip">Bohren und Gewindeschneiden</span></div></div><div class="skill-category"><h4 class="skill-category-title">Blech- und Montagearbeiten</h4><div class="chips"><span class="chip">Sägen und Feilen</span><span class="chip">Blechbearbeitung (Kanten, Nieten)</span><span class="chip">De- und Montage von Geländern, Straßenleuchten und -Pollern</span></div></div><div class="skill-category"><h4 class="skill-category-title">Umform- und Fügeverfahren</h4><div class="chips"><span class="chip">Schmieden</span><span class="chip">MAG- und WIG-Schweißen</span></div></div><div class="skill-category"><h4 class="skill-category-title">Oberflächenbearbeitung</h4><div class="chips"><span class="chip">Wasserstrahl- und Sandstrahlarbeiten</span><span class="chip">Auftragen von Korrosionsschutzbeschichtungen</span></div></div><div class="skill-category"><h4 class="skill-category-title">Steuerung und Pneumatik</h4><div class="chips"><span class="chip">SPS-Steuerung (Siemens LOGO!)</span><span class="chip">Pneumatik (Festo FluidSIM)</span></div></div></div>
+<div class="card"><h3><svg class="card-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v12H9l-5 4V5Z"/><path d="M8 9h8M8 13h6"/></svg><span>Sprachen</span></h3>
+<div class="kv-row"><span>Deutsch</span><span>Fließend</span></div>
+<div class="kv-row"><span>Albanisch</span><span>Fließend</span></div>
+<div class="kv-row"><span>Englisch</span><span>Fließend</span></div>
+<div class="kv-row"><span>Italienisch</span><span>Grundkenntnisse</span></div></div>
+
+</div>
+</div></section>
+
+<section id="ehrenamt"><div class="wrap">
+<h2><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 8.8c0 5.1-8.8 10-8.8 10s-8.8-4.9-8.8-10A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 8.8 2.8Z"/><path d="M8 12h2l1 2 2-4 1 2h2"/></svg><span>Ehrenamt</span></h2>
+<div class="tl">
+<div class="item"><h3>Sanitäter (RH)</h3><div class="meta">Deutsches Rotes Kreuz · Düsseldorf · Mitglied 2016–2026 · aktiv im Dienst 2016–2020 <a class="org-link" href="https://www.drk-duesseldorf.de/mitgliedspenden/ehrenamt/ehrenamt.html" target="_blank" rel="noopener noreferrer" aria-label="Weitere Informationen zum DRK Düsseldorf" title="Weitere Informationen zum DRK Düsseldorf">↗</a></div><h4 class="task-heading">Einsatzbereiche</h4><ul><li>Erste Hilfe und Patientenbetreuung bei Veranstaltungen bis zum Eintreffen des Rettungswagens.</li><li>Kontrolle der Sanitätsausstattung</li><li>Für den Katastrophenschutz eingeteilt</li><li>Teilnahme an Gruppenabenden und internen Schulungen</li></ul></div>
+</div>
+</div></section>
+
+<section id="persoenliches"><div class="wrap">
+
+<details class="fold" id="personal-details"><summary><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Persönliche Informationen</span></summary><div class="kvs"><div class="personal-group">
+<h3>Persönliche Angaben</h3>
+<div class="kv-row"><span>Alter</span><span id="age-value" data-birth-date="1999-09-04">27 Jahre</span></div>
+<div class="kv-row"><span>Wohnort</span><span>Krefeld <a class="org-link" href="https://de.wikipedia.org/wiki/Krefeld" target="_blank" rel="noopener noreferrer" aria-label="Wikipedia: Krefeld" title="Wikipedia: Krefeld">↗</a></span></div>
+<div class="kv-row"><span>Staatsangehörigkeiten</span><span>deutsch und albanisch</span></div>
+<div class="kv-row"><span>Familienstand</span><span>ledig</span></div>
+</div>
+<div class="personal-group">
+<h3>Persönliche Einstellungen</h3>
+<div class="kv-row"><span>Politische Haltung</span><span>sozialkonservativ</span></div>
+<div class="kv-row"><span>Weltanschauung</span><span>atheistisch</span></div>
+</div>
+<div class="personal-group">
+<h3>PSA-Angaben</h3>
+<p class="kvs-note">Für den Fall, dass Schutzausrüstung beschafft werden muss:</p>
+<div class="kv-row"><span>Körpergröße</span><span>186 cm</span></div>
+<div class="kv-row"><span>Schuhgröße</span><span>44</span></div>
+<div class="kv-row"><span>Körperbau</span><span>normal / Größe L (unverbindlich)</span></div>
+</div>
+</div>
+<details class="fold hobbies-fold"><summary><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="M19 14v4M17 16h4"/></svg><span>Hobbys</span></summary><div class="chips"><span class="chip">Laufen im Park</span><span class="chip">Fahrradfahren</span><span class="chip">Konzertgitarre spielen</span><span class="chip">KI-gestütztes Webdesign</span></div></details>
+</details>
+</div></section>
+
+<section id="kontakt" class="contact-section">
+<div class="wrap contact-grid">
+<h2><svg class="heading-icon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l2.1-5.2A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 11h8M8 14h5"/></svg><span>Kontakt</span></h2>
+<div class="contact-copy">
+<div class="contact-photo-wrap"><img class="contact-profile-photo" src="Bewerbungsbild_6.5x4.5.jpg" width="232" height="232" loading="lazy" decoding="async" alt="Arjan Hoxha"><span class="contact-photo-label"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg><span>Hallo, hier ein Bild von mir!</span></span></div>
+</div>
+
+<div class="contact-panel">
+<ol class="form-progress" aria-label="Formularfortschritt" title="Formularfortschritt"><li class="on" id="p1" aria-current="step">Ihre Kontaktdaten</li><li id="p2">Ihre Nachricht</li></ol>
+<form id="contact-form" class="contact-form" novalidate data-endpoint="https://formspree.io/f/xyeeyrnd">
+<fieldset id="step1">
+<legend>Ihre Kontaktdaten</legend>
+<p class="small">Die mit * gekennzeichneten Felder sind Pflichtfelder.</p>
+<div class="form-row">
+<label>Name * <input type="text" name="name" autocomplete="name" required></label>
+<label>E-Mail * <input type="email" name="email" autocomplete="email" required></label>
+</div>
+<div class="form-actions"><button type="button" class="btn" id="next">Weiter</button></div>
+</fieldset>
+<fieldset id="step2" hidden>
+<legend>Ihre Nachricht</legend>
+<label>Betreff (optional) <input type="text" name="subject" autocomplete="off"></label>
+<label>Nachricht * <textarea name="message" rows="5" required></textarea></label>
+<div class="form-actions"><button type="button" class="btn secondary" id="back">Zurück</button><button type="submit" class="btn">Nachricht senden</button></div>
+
+</fieldset>
+<p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+</form>
+</div>
+</div>
+</section>
+
+<footer><div class="wrap footer-row"><span>© <span id="current-year">2026</span></span><span class="legal-links"><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span><a href="#main">Nach oben ↑</a></div></footer></main>
+<script>
+/* ---------- 1. Navigation: aktiver Link & Fold „Persönliches“ ---------- */
+(function () {
+  const links = Array.from(document.querySelectorAll('nav a[href^="#"]'));
+  const personalDetails = document.getElementById('personal-details');
+  const personalLink = document.querySelector('nav a[href="#persoenliches"]');
+  if (personalLink && personalDetails) {
+    personalLink.addEventListener('click', () => { personalDetails.open = true; });
+    if (location.hash === '#persoenliches') personalDetails.open = true;
+  }
+  const sections = links.map(link => [link, document.querySelector(link.getAttribute('href'))]).filter(([, section]) => section);
+  function updateActiveLink() {
+    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+    const y = window.scrollY + 120;
+    let active = null;
+    sections.forEach(([link, section]) => { if (section.offsetTop <= y) active = link; });
+    if (atBottom && sections.length) active = sections[sections.length - 1][0];
+    links.forEach(link => {
+      const on = link === active;
+      link.classList.toggle('on', on);
+      if (on) link.setAttribute('aria-current', 'location'); else link.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  window.addEventListener('resize', updateActiveLink);
+  updateActiveLink();
+})();
+
+/* ---------- 2. Mehrsprachigkeit (Texte werden über den deutschen Originaltext zugeordnet) ---------- */
+window.localeTranslations = Object.assign(window.localeTranslations || {}, {
+    fr: {
+      0:'Parcours professionnel',1:'Compétences',2:'Bénévolat',3:'À propos',4:'Contact',5:'Me contacter',6:'Aller au contenu',7:'Haut de page ↑',
+      8:'Cette page présente mon parcours professionnel, mes qualifications et mes compétences techniques.',
+      9:'Langues',10:'Krefeld · études en cours',11:'Génie mécanique (B.Eng.)',12:'Düsseldorf · depuis août 2019',
+      13:'Formation de dessinateur-concepteur industriel (IHK Düsseldorf) · diplôme obtenu en juin 2021',
+      14:'Réalisation de plans de pièces, d’ensembles, de vues éclatées et de pièces de rechange',15:'Création et configuration de layouts d’offre pour installations de broyage (entrée, machine, étapes en aval, sortie).',
+      16:'Gestion des données de conception dans Teamcenter Active Workspace',17:'Formation des nouveaux collègues à Teamcenter Active Workspace',
+      18:'Remplacement pour la validation d’ensembles dans Teamcenter Active Workspace',
+      19:'Gestion des licences en remplacement : création de comptes Teamcenter et attribution de licences NX via Siemens Xcelerator.',
+      20:'Vérification des attributs Teamcenter et transfert des données de conception vers l’ERP SAP',
+      21:'Août 2016 – juin 2019',22:'Assistant en génie mécanique certifié par l’État, avec qualification d’accès aux études supérieures (Fachabitur)',
+      23:'Formation pratique : fraisage CNC avec iTNC 530, tournage et fraisage conventionnels, automatismes Siemens LOGO!, pneumatique avec Festo FluidSIM et CAO avec Autodesk Inventor.',
+      24:'Stages en entreprise dans le domaine de la métallurgie',25:'· octobre–novembre 2017 et 2018 · dans le cadre de la formation',
+      26:'Travaux pratiques : sciage, limage et perçage ; travail de la tôle, pliage et rivetage ; dépose et pose de garde-corps, de lampadaires et de bornes ; taraudage ; forgeage ; soudage MAG et TIG ; découpe par eau sous pression et sablage ; application de revêtements anticorrosion.',
+      27:'Certificat de fin d’études secondaires du premier cycle (Mittlerer Schulabschluss)',28:'Fabrication et commande',29:'Fraisage CNC (iTNC 530)',30:'Tournage conventionnel',31:'Fraisage conventionnel',
+      32:'Automate programmable (Siemens LOGO!)',33:'Pneumatique (Festo FluidSIM)',34:'Allemand',35:'Albanais',36:'Anglais',37:'Italien',38:'Courant',39:'Notions de base',
+      40:'Secouriste (RH)',41:'Croix-Rouge allemande · Düsseldorf · membre 2016–2026 · en service actif 2016–2020',
+      42:'Premiers secours et prise en charge des patients pendant les événements jusqu\u2019à l\u2019arrivée de l\u2019ambulance.',43:'Vérification du matériel de premiers secours',44:'Affecté à la protection civile',
+      45:'Participation aux réunions de groupe et aux formations internes',46:'Loisirs',47:'Course à pied dans le parc',48:'Vélo',49:'Jouer de la guitare classique',
+      50:'Conception web assistée par l’IA',51:'Informations personnelles',52:'Âge',53:'27 ans',54:'Lieu de résidence',55:'Nationalités',
+      56:'allemande et albanaise',57:'État civil',58:'célibataire',59:'Données personnelles',60:'Convictions personnelles',61:'Position politique',
+      62:'Vision du monde',63:'athée',64:'Taille',65:'186 cm',66:'Pointure',67:'Morphologie',68:'socialement conservateur',
+      69:'Progression du formulaire',70:'Vous souhaitez plus de renseignements ou avez une question ? Veuillez utiliser le formulaire de contact.',
+      71:'Vos coordonnées',72:'Les champs marqués d’un * sont obligatoires.',73:'Nom *',74:'E-mail *',75:'Continuer',76:'Votre message',
+      77:'Objet (facultatif)',78:'Message *',79:'Retour',80:'Envoyer le message',
+      
+      81:'Veuillez vérifier les champs obligatoires.',
+      82:'Informations sur les EPI',83:'Équipements de protection à acheter :',
+      84:'Moyenne / taille L (sans engagement)',85:'Missions et responsabilités',86:'Domaines d’intervention',87:'Compétences logicielles',
+      88:'Années d’expérience professionnelle',89:'Années d’expérience en métallurgie et en génie mécanique',90:'Traiter et convertir les nuages de points, puis les importer dans Siemens NX.',
+      91:'Sciage et limage',92:'Travail de la tôle (pliage, rivetage)',93:'Démontage et montage de garde-corps, lampadaires et bornes',94:'Forgeage',95:'Soudage MAG et TIG',96:'Découpe par eau sous pression et sablage',97:'Application de revêtements anticorrosion',98:'Perçage',99:'Taraudage',100:'Pour toute question, veuillez utiliser le',101:'formulaire de contact',102:'Usinage',103:'Travail de la tôle et montage',104:'Procédés de formage et assemblage',105:'Commande et pneumatique',106:'Traitement de surface',107:'Perçage et taraudage',108:'Bonjour, voici une photo de moi !'
+    },
+    sq: {
+      0:'Përvoja profesionale',1:'Aftësitë',2:'Vullnetarizëm',3:'Rreth meje',4:'Kontakt',5:'Më kontaktoni',6:'Kalo te përmbajtja',7:'Në krye ↑',
+      8:'Kjo faqe paraqet përvojën time profesionale, kualifikimet dhe aftësitë teknike.',
+      9:'Gjuhët',10:'Krefeld · studime në vazhdim',11:'Inxhinieri Mekanike (B.Eng.)',12:'Düsseldorf · që nga gushti 2019',
+      13:'Formim si projektues teknik (IHK Düsseldorf) · përfunduar në qershor 2021',
+      14:'Përgatitja e vizatimeve të pjesëve, montimeve, pamjeve të shpërthyera dhe pjesëve rezervë',15:'Krijimi dhe konfigurimi i planimetrive për oferta të impianteve grirëse (hyrja, makina, proceset pasuese, dalja).',
+      16:'Mirëmbajtja dhe administrimi i të dhënave teknike në Teamcenter Active Workspace',17:'Trajnimi i kolegëve të rinj në Teamcenter Active Workspace',
+      18:'Zëvendësim në miratimin e montimeve në Teamcenter Active Workspace',
+      19:'Administrim i licencave si zëvendësues: krijim llogarish Teamcenter dhe caktim licencash NX nëpërmjet Siemens Xcelerator.',
+      20:'Kontrolli i atributeve Teamcenter dhe transferimi i të dhënave teknike në sistemin ERP SAP',
+      21:'Gusht 2016 – qershor 2019',22:'Asistent i certifikuar shtetëror në inxhinieri mekanike, me të drejtë hyrjeje në arsimin e lartë (Fachabitur)',
+      23:'Përvojë praktike: frezim CNC me iTNC 530, tornim dhe frezim konvencional, kontroll Siemens LOGO!, pneumatikë me Festo FluidSIM dhe CAD me Autodesk Inventor.',
+      24:'Praktika profesionale në fushën e përpunimit të metaleve',25:'· tetor–nëntor 2017 dhe 2018 · gjatë formimit shkollor',
+      26:'Punë praktike: sharrim, limim dhe shpim; përpunim llamarine, përkulje dhe ribatinim; çmontim dhe montim i parmakëve, ndriçuesve rrugorë dhe bllokuesve të qarkullimit; filetimi; farkëtim; saldim MAG dhe WIG; prerje me ujë dhe rërëzim; aplikim i veshjeve kundër korrozionit.',
+      27:'Diploma e arsimit të mesëm të ulët (Mittlerer Schulabschluss)',28:'Prodhimi dhe kontrolli',29:'Frezim CNC (iTNC 530)',30:'Tornim konvencional',31:'Frezim konvencional',
+      32:'Kontroll PLC (Siemens LOGO!)',33:'Pneumatikë (Festo FluidSIM)',34:'Gjermanisht',35:'Shqip',36:'Anglisht',37:'Italisht',38:'Rrjedhshëm',39:'Njohuri bazë',
+      40:'Ndihmës i parë (RH)',41:'Kryqi i Kuq Gjerman · Düsseldorf · anëtar 2016–2026 · aktiv në shërbim 2016–2020',
+      42:'Ndihma e parë dhe kujdesi për pacientët në evente deri në mbërritjen e ambulancës.',43:'Kontrolli i pajisjeve të ndihmës së parë',44:'I caktuar për mbrojtjen civile',
+      45:'Pjesëmarrje në takime grupi dhe trajnime të brendshme',46:'Hobi',47:'Vrap në park',48:'Çiklizëm',49:'Luajtje e kitarës klasike',
+      50:'Dizajn web me ndihmën e IA-së',51:'Informacione personale',52:'Mosha',53:'27 vjeç',54:'Vendbanimi',55:'Shtetësitë',
+      56:'gjermane dhe shqiptare',57:'Gjendja civile',58:'beqar',59:'Të dhëna personale',60:'Qëndrime personale',61:'Qëndrimi politik',
+      62:'Botëkuptimi',63:'ateist',64:'Gjatësia',65:'186 cm',66:'Numri i këpucëve',67:'Shtati',68:'konservator shoqëror',
+      69:'Përparimi i formularit',70:'Dëshironi më shumë informacion ose keni një pyetje? Ju lutemi përdorni formularin e kontaktit.',
+      71:'Të dhënat tuaja të kontaktit',72:'Fushat e shënuara me * janë të detyrueshme.',73:'Emri *',74:'E-mail *',75:'Vazhdo',76:'Mesazhi juaj',
+      77:'Subjekti (opsional)',78:'Mesazhi *',79:'Prapa',80:'Dërgo mesazhin',
+      
+      81:'Ju lutemi kontrolloni fushat e detyrueshme.',
+      82:'Të dhënat për pajisjet mbrojtëse',83:'Në rast se duhet të blihen pajisje mbrojtëse:',
+      84:'Mesatare / masa L (jo detyruese)',85:'Detyrat dhe përgjegjësitë',86:'Fushat e veprimtarisë',87:'Njohuri softuerësh',
+      88:'Vite përvojë profesionale',89:'Vite përvojë në përpunimin e metaleve dhe inxhinierinë mekanike',90:'Përpunimi dhe konvertimi i reve të pikave, pastaj importimi i tyre në mjedisin Siemens NX.',
+      91:'Sharrim dhe limim',92:'Përpunimi i llamarinës (përkulje, ribatinim)',93:'Çmontim dhe montim i parmakëve, ndriçuesve rrugorë dhe bllokuesve',94:'Farkëtim',95:'Saldim MAG dhe WIG',96:'Përpunim me rrymë uji dhe rërë',97:'Aplikimi i veshjeve kundër korrozionit',98:'Shpim',99:'Filetim',100:'Për pyetje, ju lutem përdorni',101:'formulari i kontaktit',102:'Përpunim me heqje të materialit',103:'Punime llamarine dhe montimi',104:'Metodat e formimit dhe bashkimit',105:'Kontroll dhe pneumatikë',106:'Përpunimi i sipërfaqeve',107:'Shpim dhe filetim',108:'Përshëndetje, ja një foto e imja!'
+    },
+    it: {
+      0:'Esperienza professionale',1:'Competenze',2:'Volontariato',3:'Profilo',4:'Contatti',5:'Contattami',6:'Vai al contenuto',7:'Torna in alto ↑',
+      8:'Questa pagina presenta il mio percorso professionale, le qualifiche e le competenze tecniche.',
+      9:'Lingue',10:'Krefeld · studi in corso',11:'Ingegneria meccanica (B.Eng.)',12:'Düsseldorf · da agosto 2019',
+      13:'Formazione come progettista tecnico di prodotto (IHK Düsseldorf) · conclusa a giugno 2021',
+      14:'Realizzazione di disegni di componenti, assiemi, esplosi e ricambi',15:'Creazione e configurazione dei layout per offerte di impianti di triturazione (ingresso, macchina, processi a valle, uscita).',
+      16:'Gestione dei dati di progettazione in Teamcenter Active Workspace',17:'Formazione dei nuovi colleghi su Teamcenter Active Workspace',
+      18:'Sostituzione nelle approvazioni degli assiemi in Teamcenter Active Workspace',
+      19:'Gestione delle licenze in sostituzione: creazione di account Teamcenter e assegnazione di licenze NX tramite Siemens Xcelerator.',
+      20:'Verifica degli attributi Teamcenter e trasferimento dei dati tecnici al sistema ERP SAP',
+      21:'Agosto 2016 – giugno 2019',22:'Assistente tecnico meccanico riconosciuto dallo Stato, con diploma di accesso all’istruzione superiore (Fachabitur)',
+      23:'Attività pratiche: fresatura CNC con iTNC 530, tornitura e fresatura convenzionali, controllo Siemens LOGO!, pneumatica con Festo FluidSIM e CAD con Autodesk Inventor.',
+      24:'Tirocini aziendali nel settore della lavorazione dei metalli',25:'· ottobre–novembre 2017 e 2018 · nell’ambito della formazione scolastica',
+      26:'Attività pratiche: segatura, limatura e foratura; lavorazione della lamiera, piegatura e rivettatura; smontaggio e montaggio di ringhiere, lampioni stradali e dissuasori; filettatura; forgiatura; saldatura MAG e TIG; taglio con acqua in pressione e sabbiatura; applicazione di rivestimenti anticorrosione.',
+      27:'Diploma di scuola secondaria intermedia (Mittlerer Schulabschluss)',28:'Produzione e controllo',29:'Fresatura CNC (iTNC 530)',30:'Tornitura convenzionale',31:'Fresatura convenzionale',
+      32:'Controllo PLC (Siemens LOGO!)',33:'Pneumatica (Festo FluidSIM)',34:'Tedesco',35:'Albanese',36:'Inglese',37:'Italiano',38:'Fluente',39:'Conoscenze di base',
+      40:'Soccorritore (RH)',41:'Croce Rossa Tedesca · Düsseldorf · membro 2016–2026 · servizio attivo 2016–2020',
+      42:'Primo soccorso e assistenza ai pazienti durante gli eventi fino all\u2019arrivo dell\u2019ambulanza.',43:'Controllo delle dotazioni di primo soccorso',44:'Assegnato alla protezione civile',
+      45:'Partecipazione a riunioni di gruppo e corsi interni',46:'Hobby',47:'Corsa al parco',48:'Ciclismo',49:'Suonare la chitarra classica',
+      50:'Web design assistito dall’IA',51:'Informazioni personali',52:'Età',53:'27 anni',54:'Residenza',55:'Cittadinanze',
+      56:'tedesca e albanese',57:'Stato civile',58:'celibe',59:'Dati personali',60:'Orientamenti personali',61:'Orientamento politico',
+      62:'Visione del mondo',63:'ateo',64:'Altezza',65:'186 cm',66:'Numero di scarpe',67:'Corporatura',68:'conservatore sociale',
+      69:'Avanzamento del modulo',70:'Desidera maggiori informazioni o ha una domanda? Utilizzi il modulo di contatto.',
+      71:'I suoi dati di contatto',72:'I campi contrassegnati con * sono obbligatori.',73:'Nome *',74:'E-mail *',75:'Avanti',76:'Il suo messaggio',
+      77:'Oggetto (facoltativo)',78:'Messaggio *',79:'Indietro',80:'Invia messaggio',
+      
+      81:'Controlli i campi obbligatori.',
+      82:'Informazioni sui DPI',83:'Nel caso in cui sia necessario acquistare dispositivi di protezione:',
+      84:'Media / taglia L (indicativa)',85:'Attività e responsabilità',86:'Aree di intervento',87:'Competenze software',
+      88:'Anni di esperienza professionale',89:'Anni di esperienza nella lavorazione dei metalli e nell’ingegneria meccanica',90:'Elaborazione e conversione di nuvole di punti, con importazione nell\u2019ambiente Siemens NX.',
+      91:'Segatura e limatura',92:'Lavorazione della lamiera (piegatura, rivettatura)',93:'Smontaggio e montaggio di ringhiere, lampioni stradali e dissuasori',94:'Fucinatura',95:'Saldatura MAG e WIG',96:'Lavorazioni con acqua in pressione e sabbiatura',97:'Applicazione di rivestimenti anticorrosione',98:'Foratura',99:'Filettatura',100:'Per domande, utilizzi il',101:'modulo di contatto',102:'Lavorazioni per asportazione di truciolo',103:'Lavorazioni della lamiera e montaggio',104:'Lavorazioni di deformazione e giunzione',105:'Controllo e pneumatica',106:'Lavorazioni delle superfici',107:'Foratura e filettatura',108:'Ciao, ecco una mia foto!'
+    },
+    ar: {
+      0:'الخبرة المهنية',1:'المهارات',2:'العمل التطوعي',3:'نبذة عني',4:'التواصل',5:'تواصل معي',6:'انتقل إلى المحتوى',7:'إلى الأعلى ↑',
+      8:'تعرض هذه الصفحة مسيرتي المهنية ومؤهلاتي ومهاراتي التقنية.',
+      9:'اللغات',10:'كريفيلد · الدراسة مستمرة',11:'الهندسة الميكانيكية (B.Eng.)',12:'دوسلدورف · منذ أغسطس 2019',
+      13:'تدريب رسام ومصمم تقني (IHK Düsseldorf) · اكتمل في يونيو 2021',
+      14:'إعداد رسومات القطع والتجميعات والمنظور التفجيري وقطع الغيار',15:'إعداد وتهيئة مخططات عروض لمنشآت التمزيق (الشريدر): المدخل، الآلة، العمليات اللاحقة، المخرج.',
+      16:'صيانة وإدارة بيانات التصميم في Teamcenter Active Workspace',17:'تدريب الزملاء الجدد على Teamcenter Active Workspace',
+      18:'الإنابة في اعتماد التجميعات في Teamcenter Active Workspace',
+      19:'إدارة التراخيص بالإنابة: إنشاء حسابات Teamcenter وتعيين تراخيص NX عبر Siemens Xcelerator.',
+      20:'فحص سمات Teamcenter ونقل بيانات التصميم إلى نظام SAP لتخطيط موارد المؤسسة',
+      21:'أغسطس 2016 – يونيو 2019',22:'مساعد هندسة ميكانيكية معتمد من الدولة، مع مؤهل الالتحاق بالتعليم العالي (Fachabitur)',
+      23:'تدريب عملي: تفريز CNC باستخدام iTNC 530، وخراطة وتفريز تقليديان، وأنظمة تحكم Siemens LOGO!، ونيوماتيك باستخدام Festo FluidSIM، وCAD باستخدام Autodesk Inventor.',
+      24:'تدريب عملي في مجال تشغيل المعادن',25:'· أكتوبر–نوفمبر 2017 و2018 · ضمن التدريب المدرسي',
+      26:'أعمال عملية: النشر والبرد والثقب؛ تشغيل الصفائح المعدنية والثني والتثبيت بالمسامير؛ فك وتركيب الدرابزين وأعمدة الإنارة والحواجز؛ قطع اللولب؛ الحدادة؛ اللحام MAG وTIG؛ القطع بنفث الماء والسفع الرملي؛ تطبيق طلاءات واقية من التآكل.',
+      27:'شهادة إتمام المرحلة المتوسطة (Mittlerer Schulabschluss)',28:'التصنيع والتحكم',29:'تفريز CNC (iTNC 530)',30:'خراطة تقليدية',31:'تفريز تقليدي',
+      32:'تحكم PLC (Siemens LOGO!)',33:'نيوماتيك (Festo FluidSIM)',34:'الألمانية',35:'الألبانية',36:'الإنجليزية',37:'الإيطالية',38:'بطلاقة',39:'معرفة أساسية',
+      40:'مسعف (RH)',41:'الصليب الأحمر الألماني · دوسلدورف · عضو 2016–2026 · خدمة فعالة 2016–2020',
+      42:'الإسعافات الأولية ورعاية المرضى في الفعاليات حتى وصول سيارة الإسعاف.',43:'فحص معدات الإسعافات الأولية',44:'مكلّف بالحماية من الكوارث',
+      45:'المشاركة في الاجتماعات الجماعية والتدريبات الداخلية',46:'الهوايات',47:'الجري في الحديقة',48:'ركوب الدراجة',49:'عزف الغيتار الكلاسيكي',
+      50:'تصميم مواقع بمساعدة الذكاء الاصطناعي',51:'معلومات شخصية',52:'العمر',53:'27 عامًا',54:'مكان الإقامة',55:'الجنسيتان',
+      56:'ألمانية وألبانية',57:'الحالة الاجتماعية',58:'أعزب',59:'بيانات شخصية',60:'توجهات شخصية',61:'الموقف السياسي',
+      62:'الرؤية للعالم',63:'ملحد',64:'الطول',65:'186 سم',66:'مقاس الحذاء',67:'البنية الجسدية',68:'محافظ اجتماعيًا',
+      69:'تقدم النموذج',70:'هل ترغبون في معرفة المزيد أو لديكم سؤال؟ يُرجى استخدام نموذج الاتصال.',
+      71:'بيانات الاتصال الخاصة بكم',72:'الحقول المعلّمة بعلامة * إلزامية.',73:'الاسم *',74:'البريد الإلكتروني *',75:'التالي',76:'رسالتكم',
+      77:'الموضوع (اختياري)',78:'الرسالة *',79:'رجوع',80:'إرسال الرسالة',
+      
+      81:'يرجى التحقق من الحقول الإلزامية.',
+      82:'معلومات معدات الوقاية الشخصية',83:'في حال الحاجة إلى شراء معدات الوقاية:',
+      84:'متوسط / مقاس L (غير ملزم)',85:'المهام والمسؤوليات',86:'مجالات العمل',87:'مهارات البرامج',
+      88:'سنوات الخبرة المهنية',89:'سنوات الخبرة في تشغيل المعادن والهندسة الميكانيكية',90:'معالجة سحب النقاط وتحويلها ثم استيرادها في بيئة Siemens NX.',
+      91:'النشر والبرد',92:'تشغيل الصفائح المعدنية (الثني والتثبيت بالمسامير)',93:'فك وتركيب الدرابزين وأعمدة الإنارة والحواجز',94:'الحدادة',95:'لحام MAG وWIG',96:'القطع بنفث الماء والسفع الرملي',97:'تطبيق الطلاءات الواقية من التآكل',98:'الثقب',99:'قطع اللولب',100:'للاستفسارات، يُرجى استخدام',101:'نموذج الاتصال',102:'التشغيل بالقطع',103:'أعمال الصفائح المعدنية والتركيب',104:'عمليات التشكيل والربط',105:'التحكم والنيوماتيك',106:'معالجة الأسطح',107:'الثقب وقطع اللولب',108:'مرحبًا، هذه صورة لي!'
+    }
+  });
+
+window.localeTranslations = Object.assign(window.localeTranslations || {}, {
+    hi: {
+      0:'पेशेवर अनुभव',1:'कौशल',2:'स्वयंसेवा',3:'मेरे बारे में',4:'संपर्क',5:'संपर्क करें',6:'मुख्य सामग्री पर जाएँ',7:'ऊपर जाएँ ↑',
+      8:'यह पृष्ठ मेरे पेशेवर अनुभव, योग्यताओं और तकनीकी कौशल का परिचय देता है।',
+      9:'भाषाएँ',10:'क्रेफेल्ड · पढ़ाई जारी',11:'मैकेनिकल इंजीनियरिंग (B.Eng.)',12:'डसेलडॉर्फ · अगस्त 2019 से',
+      13:'तकनीकी उत्पाद डिज़ाइनर का प्रशिक्षण (IHK Düsseldorf) · जून 2021 में पूरा',
+      14:'पुर्ज़ों, असेंबली, विस्फोटित दृश्य और स्पेयर पार्ट्स के चित्र बनाना',15:'श्रेडर संयंत्रों के प्रस्ताव हेतु लेआउट बनाना और कॉन्फ़िगर करना (इनपुट, मशीन, आगे की प्रक्रियाएँ, आउटपुट)।',
+      16:'Teamcenter Active Workspace में डिज़ाइन डेटा का रखरखाव और प्रबंधन',17:'नए सहकर्मियों को Teamcenter Active Workspace का प्रशिक्षण',
+      18:'Teamcenter Active Workspace में असेंबली की स्वीकृति के लिए स्थानापन्न (प्रतिनिधि) भूमिका',
+      19:'लाइसेंस प्रशासन में प्रतिनिधि भूमिका: Teamcenter खाते बनाना और Siemens Xcelerator से NX लाइसेंस देना।',
+      20:'Teamcenter में डिज़ाइन डेटा के गुणों की जाँच और SAP ERP में डेटा स्थानांतरित करना',
+      21:'अगस्त 2016 – जून 2019',22:'राज्य-प्रमाणित मैकेनिकल इंजीनियरिंग तकनीकी सहायक, उच्च शिक्षा प्रवेश योग्यता (Fachabitur) सहित',
+      23:'व्यावहारिक प्रशिक्षण: iTNC 530 के साथ CNC मिलिंग, पारंपरिक टर्निंग और मिलिंग, Siemens LOGO! नियंत्रण, Festo FluidSIM वायवीय प्रणाली और Autodesk Inventor CAD।',
+      24:'धातु-कार्य क्षेत्र में औद्योगिक प्रशिक्षण',25:'· अक्टूबर–नवंबर 2017 और 2018 · स्कूल प्रशिक्षण के भाग के रूप में',
+      26:'व्यावहारिक कार्य: आरी से काटना, रेती करना और ड्रिलिंग; शीट-मेटल कार्य, मोड़ना और रिवेट लगाना; रेलिंग, सड़क की लाइटों और बोलार्ड को खोलना और लगाना; थ्रेड काटना; फोर्जिंग; MAG और TIG वेल्डिंग; वॉटर-जेट कटिंग और सैंडब्लास्टिंग; जंग-रोधी कोटिंग लगाना।',
+      27:'माध्यमिक विद्यालय प्रमाणपत्र',28:'निर्माण और नियंत्रण',29:'CNC मिलिंग (iTNC 530)',30:'पारंपरिक टर्निंग',31:'पारंपरिक मिलिंग',
+      32:'PLC नियंत्रण (Siemens LOGO!)',33:'वायवीय प्रणाली (Festo FluidSIM)',34:'जर्मन',35:'अल्बानियाई',36:'अंग्रेज़ी',37:'इतालवी',38:'धाराप्रवाह',39:'बुनियादी ज्ञान',
+      40:'प्राथमिक उपचारक (RH)',41:'जर्मन रेड क्रॉस · डसेलडॉर्फ · सदस्य 2016–2026 · सक्रिय सेवा 2016–2020',
+      42:'कार्यक्रमों में एम्बुलेंस आने तक प्राथमिक उपचार और मरीजों की देखभाल।',43:'प्राथमिक उपचार उपकरणों की जाँच',44:'आपदा-प्रबंधन सेवा के लिए नियुक्त',
+      45:'समूह बैठकों और आंतरिक प्रशिक्षण में भागीदारी',46:'शौक',47:'पार्क में दौड़ना',48:'साइकिल चलाना',49:'क्लासिकल गिटार बजाना',
+      50:'AI-सहायता प्राप्त वेब डिज़ाइन',51:'व्यक्तिगत जानकारी',52:'आयु',53:'27 वर्ष',54:'निवास स्थान',55:'नागरिकताएँ',
+      56:'जर्मन और अल्बानियाई',57:'वैवाहिक स्थिति',58:'अविवाहित',59:'व्यक्तिगत विवरण',60:'व्यक्तिगत विचार',61:'राजनीतिक रुझान',
+      62:'विश्व-दृष्टिकोण',63:'नास्तिक',64:'कद',65:'186 सेमी',66:'जूते का आकार',67:'शारीरिक बनावट',68:'सामाजिक रूप से रूढ़िवादी',
+      69:'फ़ॉर्म की प्रगति',70:'क्या आप अधिक जानकारी चाहते हैं या आपका कोई प्रश्न है? कृपया संपर्क फ़ॉर्म का उपयोग करें।',
+      71:'आपकी संपर्क जानकारी',72:'* से चिह्नित फ़ील्ड आवश्यक हैं।',73:'नाम *',74:'ई-मेल *',75:'आगे',76:'आपका संदेश',
+      77:'विषय (वैकल्पिक)',78:'संदेश *',79:'पीछे',80:'संदेश भेजें',
+      
+      81:'कृपया आवश्यक फ़ील्ड जाँचें।',
+      82:'व्यक्तिगत सुरक्षा उपकरण की जानकारी',83:'यदि सुरक्षा उपकरण खरीदने की आवश्यकता हो:',
+      84:'औसत / आकार L (गैर-बाध्यकारी)',85:'कार्य और ज़िम्मेदारियाँ',86:'कार्य क्षेत्र',87:'सॉफ़्टवेयर कौशल',
+      88:'पेशेवर अनुभव के वर्ष',89:'धातु-कार्य और मैकेनिकल इंजीनियरिंग में अनुभव के वर्ष',90:'पॉइंट क्लाउड का प्रसंस्करण और रूपांतरण, फिर Siemens NX परिवेश में आयात।',
+      91:'आरी से काटना और रेती करना',92:'शीट मेटल कार्य (मोड़ना, रिवेट लगाना)',93:'रेलिंग, सड़क की लाइटों और बोलार्ड को खोलना और लगाना',94:'धातु गढ़ना',95:'MAG और WIG वेल्डिंग',96:'वॉटर-जेट कार्य और सैंडब्लास्टिंग',97:'जंग-रोधी परतों का अनुप्रयोग',98:'ड्रिलिंग',99:'थ्रेड काटना',100:'प्रश्नों के लिए कृपया',101:'संपर्क फ़ॉर्म',102:'मशीनिंग',103:'शीट मेटल और असेंबली कार्य',104:'आकार देने और जोड़ने की प्रक्रियाएँ',105:'नियंत्रण और न्यूमैटिक्स',106:'सतह उपचार',107:'ड्रिलिंग और थ्रेड कटिंग',108:'नमस्ते, यह मेरी तस्वीर है!'
+    },
+    ja: {
+      0:'職務経歴',1:'スキル',2:'ボランティア',3:'プロフィール',4:'お問い合わせ',5:'お問い合わせはこちら',6:'本文へ移動',7:'ページ上部へ ↑',
+      8:'このページでは、職務経歴、資格、技術スキルを紹介します。',
+      9:'言語',10:'クレーフェルト · 在学中',11:'機械工学（B.Eng.）',12:'デュッセルドルフ · 2019年8月から',
+      13:'技術製品設計者の職業訓練（IHK Düsseldorf） · 2021年6月修了',
+      14:'部品図、組立図、分解図、スペアパーツ図の作成',15:'破砕設備の見積用レイアウトを作成・設定（投入、機械、後工程、排出）。',
+      16:'Teamcenter Active Workspaceでの設計データの管理',17:'新しい同僚へのTeamcenter Active Workspaceの指導',
+      18:'Teamcenter Active Workspaceでの組立品承認の代理対応',
+      19:'ライセンス管理の代理業務：Teamcenterアカウントの作成とSiemens XceleratorでのNXライセンス割り当て。',
+      20:'Teamcenterの設計データ属性を確認し、SAP ERPへデータを転送',
+      21:'2016年8月 – 2019年6月',22:'州認定機械工学技術アシスタント、高等教育入学資格（Fachabitur）取得',
+      23:'実習内容：iTNC 530によるCNCフライス加工、従来型旋盤・フライス加工、Siemens LOGO!制御、Festo FluidSIM空気圧、Autodesk Inventor CAD。',
+      24:'金属加工分野の企業実習',25:'· 2017年および2018年10～11月 · 学校での職業訓練の一環',
+      26:'実作業：のこ引き、やすり掛け、穴あけ、板金加工、曲げ、リベット留め、手すり・街灯・車止めの取り外しと取り付け、ねじ切り、鍛造、MAG・TIG溶接、ウォータージェット加工、サンドブラスト、防食塗装の施工。',
+      27:'中等教育修了証',28:'製造と制御',29:'CNCフライス加工（iTNC 530）',30:'従来型旋盤加工',31:'従来型フライス加工',
+      32:'PLC制御（Siemens LOGO!）',33:'空気圧（Festo FluidSIM）',34:'ドイツ語',35:'アルバニア語',36:'英語',37:'イタリア語',38:'流暢',39:'基礎知識',
+      40:'救護員（RH）',41:'ドイツ赤十字 · デュッセルドルフ · 2016～2026年会員 · 2016～2020年に活動',
+      42:'イベントで救急車が到着するまでの応急手当と患者対応。',43:'救護用具の点検',44:'災害対策要員に指定',
+      45:'グループ会合および内部研修への参加',46:'趣味',47:'公園でのランニング',48:'サイクリング',49:'クラシックギターの演奏',
+      50:'AIを活用したウェブデザイン',51:'個人情報',52:'年齢',53:'27歳',54:'居住地',55:'国籍',
+      56:'ドイツ国籍、アルバニア国籍',57:'婚姻状況',58:'未婚',59:'個人データ',60:'個人的な考え',61:'政治的立場',
+      62:'世界観',63:'無神論者',64:'身長',65:'186 cm',66:'靴のサイズ',67:'体格',68:'社会保守主義',
+      69:'フォームの進行状況',70:'詳しい情報をご希望の場合やご質問がある場合は、お問い合わせフォームをご利用ください。',
+      71:'ご連絡先',72:'* 印の項目は必須です。',73:'氏名 *',74:'メールアドレス *',75:'次へ',76:'メッセージ',
+      77:'件名（任意）',78:'メッセージ *',79:'戻る',80:'メッセージを送信',
+      
+      81:'必須項目をご確認ください。',
+      82:'個人用保護具の情報',83:'保護具を購入する必要がある場合：',
+      84:'標準 / サイズL（参考）',85:'主な業務・責任',86:'対応分野',87:'ソフトウェアスキル',
+      88:'職務経験年数',89:'金属加工および機械工学の経験年数',90:'点群データを処理・変換し、Siemens NX環境に取り込み。',
+      91:'のこ引き・やすり掛け',92:'板金加工（曲げ、リベット留め）',93:'手すり・街灯・車止めの取り外しと取り付け',94:'鍛造',95:'MAG・WIG溶接',96:'ウォータージェット加工・サンドブラスト',97:'防食コーティングの塗布',98:'穴あけ',99:'ねじ切り',100:'ご質問があれば、',101:'お問い合わせフォーム',102:'切削加工',103:'板金加工・組み立て',104:'成形・接合加工',105:'制御・空気圧',106:'表面処理',107:'穴あけ・ねじ切り',108:'こんにちは、私の写真です！'
+    },
+    'zh-Hans': {
+      0:'职业经历',1:'技能',2:'志愿服务',3:'个人简介',4:'联系',5:'联系我',6:'跳转到正文',7:'返回顶部 ↑',
+      8:'本页面概述我的职业经历、资质和技术技能。',
+      9:'语言',10:'克雷费尔德 · 在读',11:'机械工程（B.Eng.）',12:'杜塞尔多夫 · 自2019年8月起',
+      13:'技术产品设计师职业培训（IHK Düsseldorf）· 2021年6月完成',
+      14:'绘制零件图、装配图、爆炸图和备件图',15:'为破碎设备报价创建并配置布局（进料、设备、后续工序、出料）。',
+      16:'维护和管理 Teamcenter Active Workspace 中的设计数据',17:'培训新同事使用 Teamcenter Active Workspace',
+      18:'代理审批 Teamcenter Active Workspace 中的装配件',
+      19:'代理管理许可证：创建 Teamcenter 账户，并通过 Siemens Xcelerator 分配 NX 许可证。',
+      20:'检查 Teamcenter 设计数据属性，并将数据传输至 SAP ERP 系统',
+      21:'2016年8月 – 2019年6月',22:'国家认证机械工程技术助理，具备高等教育入学资格（Fachabitur）',
+      23:'实践内容：使用 iTNC 530 进行 CNC 铣削、传统车削和铣削、Siemens LOGO! 控制、Festo FluidSIM 气动技术以及 Autodesk Inventor CAD。',
+      24:'金属加工领域的企业实习',25:'· 2017年和2018年10月至11月 · 学校职业培训期间',
+      26:'实践工作：锯切、锉削、钻孔、钣金加工、折弯、铆接；护栏、路灯和隔离柱的拆卸与安装；攻丝、锻造、MAG与TIG焊接、水刀切割、喷砂及涂覆防腐涂层。',
+      27:'中等教育毕业证书',28:'制造与控制',29:'CNC铣削（iTNC 530）',30:'传统车削',31:'传统铣削',
+      32:'PLC控制（Siemens LOGO!）',33:'气动技术（Festo FluidSIM）',34:'德语',35:'阿尔巴尼亚语',36:'英语',37:'意大利语',38:'流利',39:'基础知识',
+      40:'急救员（RH）',41:'德国红十字会 · 杜塞尔多夫 · 会员 2016–2026 · 活跃服务 2016–2020',
+      42:'活动现场提供急救和患者照护，直至救护车到达。',43:'检查急救设备',44:'被指定参与灾害防护工作',
+      45:'参加小组会议和内部培训',46:'兴趣爱好',47:'公园跑步',48:'骑自行车',49:'演奏古典吉他',
+      50:'人工智能辅助网页设计',51:'个人信息',52:'年龄',53:'27岁',54:'居住地',55:'国籍',
+      56:'德国籍和阿尔巴尼亚籍',57:'婚姻状况',58:'未婚',59:'个人详情',60:'个人观点',61:'政治立场',
+      62:'世界观',63:'无神论者',64:'身高',65:'186厘米',66:'鞋码',67:'体型',68:'社会保守主义',
+      69:'表单进度',70:'如需了解更多信息或有任何问题，请使用联系表单。',
+      71:'您的联系方式',72:'带 * 的字段为必填项。',73:'姓名 *',74:'电子邮箱 *',75:'继续',76:'您的消息',
+      77:'主题（可选）',78:'消息 *',79:'返回',80:'发送消息',
+      
+      81:'请检查必填字段。',
+      82:'个人防护装备信息',83:'如需采购防护装备：',
+      84:'普通 / L码（非约束性）',85:'主要职责与工作重点',86:'工作领域',87:'软件技能',
+      88:'工作年限',89:'金属加工与机械工程经验年限',90:'处理并转换点云数据，再导入 Siemens NX 环境。',
+      91:'锯切与锉削',92:'钣金加工（折弯、铆接）',93:'护栏、路灯和隔离柱的拆卸与安装',94:'锻造',95:'MAG 和 WIG 焊接',96:'水刀加工与喷砂',97:'涂覆防腐涂层',98:'钻孔',99:'攻丝',100:'如有疑问，请使用',101:'联系表单',102:'切削加工',103:'钣金与装配作业',104:'成形与连接工艺',105:'控制与气动技术',106:'表面处理',107:'钻孔与攻丝',108:'你好，这是一张我的照片！'
+    },
+    ko: {
+      0:'경력',1:'역량',2:'자원봉사',3:'소개',4:'연락처',5:'문의하기',6:'본문으로 건너뛰기',7:'맨 위로 ↑',
+      8:'이 페이지에서는 경력, 자격 및 기술 역량을 소개합니다.',
+      9:'언어',10:'크레펠트 · 재학 중',11:'기계공학(B.Eng.)',12:'뒤셀도르프 · 2019년 8월부터',
+      13:'기술 제품 디자이너 직업교육(IHK Düsseldorf) · 2021년 6월 수료',
+      14:'부품도, 조립도, 분해도 및 예비 부품 도면 작성',15:'파쇄 설비 견적용 레이아웃 작성 및 구성(투입, 기계, 후속 공정, 배출).',
+      16:'Teamcenter Active Workspace 설계 데이터 관리',17:'신규 동료에게 Teamcenter Active Workspace 교육',
+      18:'Teamcenter Active Workspace 조립품 승인 업무 대행',
+      19:'라이선스 관리 대행: Teamcenter 계정 생성 및 Siemens Xcelerator를 통한 NX 라이선스 할당.',
+      20:'Teamcenter 설계 데이터 속성 확인 및 SAP ERP로 데이터 이전',
+      21:'2016년 8월 – 2019년 6월',22:'국가 공인 기계공학 기술 보조원, 대학 입학 자격(Fachabitur) 보유',
+      23:'실습 내용: iTNC 530 CNC 밀링, 일반 선반 및 밀링, Siemens LOGO! 제어, Festo FluidSIM 공압, Autodesk Inventor CAD.',
+      24:'금속 가공 분야 현장 실습',25:'· 2017년 및 2018년 10~11월 · 학교 직업교육 과정',
+      26:'실무 작업: 톱질, 줄질, 드릴링, 판금 가공, 절곡, 리벳팅; 난간, 가로등 및 볼라드 철거 및 설치; 나사 가공, 단조, MAG·TIG 용접, 워터젯 및 샌드블라스팅, 부식 방지용 코팅 도포.',
+      27:'중등학교 졸업 자격',28:'제조 및 제어',29:'CNC 밀링(iTNC 530)',30:'일반 선반 가공',31:'일반 밀링 가공',
+      32:'PLC 제어(Siemens LOGO!)',33:'공압(Festo FluidSIM)',34:'독일어',35:'알바니아어',36:'영어',37:'이탈리아어',38:'유창함',39:'기초 지식',
+      40:'응급처치 요원(RH)',41:'독일 적십자 · 뒤셀도르프 · 회원 2016–2026 · 2016–2020년 활동',
+      42:'행사 현장에서 구급차 도착 전까지 응급처치와 환자 돌봄 제공.',43:'응급처치 장비 점검',44:'재난 대응 업무 지정',
+      45:'그룹 모임 및 내부 교육 참여',46:'취미',47:'공원 달리기',48:'자전거 타기',49:'클래식 기타 연주',
+      50:'AI 기반 웹 디자인',51:'개인 정보',52:'나이',53:'27세',54:'거주지',55:'국적',
+      56:'독일 및 알바니아 국적',57:'혼인 상태',58:'미혼',59:'개인 사항',60:'개인적 견해',61:'정치적 입장',
+      62:'세계관',63:'무신론자',64:'키',65:'186cm',66:'신발 사이즈',67:'체격',68:'사회 보수주의',
+      69:'양식 진행률',70:'더 자세한 정보가 필요하거나 문의 사항이 있으시면 문의 양식을 이용해 주세요.',
+      71:'연락처 정보',72:'* 표시된 항목은 필수입니다.',73:'이름 *',74:'이메일 *',75:'다음',76:'메시지',
+      77:'제목(선택 사항)',78:'메시지 *',79:'뒤로',80:'메시지 보내기',
+      
+      81:'필수 항목을 확인해 주세요.',
+      82:'개인 보호 장비 정보',83:'보호 장비를 구매해야 하는 경우:',
+      84:'보통 / L 사이즈(참고용)',85:'주요 업무 및 책임',86:'업무 분야',87:'소프트웨어 역량',
+      88:'경력 연수',89:'금속 가공 및 기계공학 경력 연수',90:'포인트 클라우드를 처리하고 변환한 뒤 Siemens NX 환경으로 가져오기.',
+      91:'톱질 및 줄질',92:'판금 가공(절곡, 리벳 작업)',93:'난간, 가로등 및 볼라드 철거 및 설치',94:'단조',95:'MAG·WIG 용접',96:'워터젯 가공 및 샌드블라스팅',97:'부식 방지 코팅 도포',98:'드릴 가공',99:'나사 가공',100:'문의 사항은',101:'문의 양식',102:'절삭 가공',103:'판금 및 조립 작업',104:'성형 및 접합 공정',105:'제어 및 공압',106:'표면 처리',107:'드릴링 및 나사 가공',108:'안녕하세요, 제 사진입니다!'
+    }
+  });
+window.localeTranslations = Object.assign(window.localeTranslations || {}, {
+  ru: {
+    0:'Профессиональный опыт',1:'Навыки',2:'Волонтёрская деятельность',3:'Обо мне',4:'Контакты',5:'Связаться со мной',6:'Перейти к содержимому',7:'Наверх ↑',
+    8:'На этой странице представлены мой профессиональный опыт, квалификация и технические навыки.',
+    9:'Языки',10:'Крефельд · обучение продолжается',11:'Машиностроение (B.Eng.)',12:'Дюссельдорф · с августа 2019 года',
+    13:'Профессиональное обучение по специальности «технический дизайнер изделий» (IHK Düsseldorf) · окончено в июне 2021 года',
+    14:'Создание чертежей деталей, сборочных единиц, взрыв-схем и запасных частей',15:'Создание и настройка компоновок шредерных установок для предложений (подача, машина, последующие процессы, выгрузка).',
+    16:'Ведение и администрирование конструкторских данных в Teamcenter Active Workspace',17:'Обучение новых коллег работе в Teamcenter Active Workspace',
+    18:'Замещение при согласовании сборок в Teamcenter Active Workspace',
+    19:'Замещение в администрировании лицензий: создание учетных записей Teamcenter и назначение лицензий NX через Siemens Xcelerator.',
+    20:'Проверка атрибутов конструкторских данных в Teamcenter и передача данных в ERP-систему SAP',
+    21:'Август 2016 – июнь 2019',22:'Технический ассистент по машиностроению с государственной квалификацией и правом поступления в вуз (Fachabitur)',
+    23:'Практическая подготовка: фрезерование с ЧПУ на iTNC 530, традиционная токарная и фрезерная обработка, системы управления Siemens LOGO!, пневматика в Festo FluidSIM и CAD в Autodesk Inventor.',
+    24:'Производственная практика в области металлообработки',25:'· октябрь–ноябрь 2017 и 2018 годов · в рамках школьного обучения',
+    26:'Практические работы: пиление, опиливание и сверление; обработка листового металла, гибка и клёпка; демонтаж и монтаж ограждений, уличных светильников и столбиков; нарезание резьбы; ковка; сварка MAG и TIG; гидроабразивная резка и пескоструйная обработка; нанесение антикоррозионных покрытий.',
+    27:'Свидетельство о среднем образовании',28:'Производство и управление',29:'Фрезерование с ЧПУ (iTNC 530)',30:'Традиционная токарная обработка',31:'Традиционное фрезерование',
+    32:'Управление ПЛК (Siemens LOGO!)',33:'Пневматика (Festo FluidSIM)',34:'Немецкий',35:'Албанский',36:'Английский',37:'Итальянский',38:'Свободное владение',39:'Базовые знания',
+    40:'Санитар (RH)',41:'Немецкий Красный Крест · Дюссельдорф · участник с 2016 по 2026 год · активная служба в 2016–2020 годах',
+    42:'Первая помощь и уход за пациентами на мероприятиях до приезда скорой помощи.',43:'Проверка медицинского оснащения',44:'Назначен для участия в защите от чрезвычайных ситуаций',
+    45:'Участие в групповых встречах и внутренних обучениях',46:'Увлечения',47:'Бег в парке',48:'Езда на велосипеде',49:'Игра на классической гитаре',
+    50:'Веб-дизайн с использованием искусственного интеллекта',51:'Личная информация',52:'Возраст',53:'27 лет',54:'Место жительства',55:'Гражданства',
+    56:'немецкое и албанское',57:'Семейное положение',58:'не женат',59:'Личные данные',60:'Личные взгляды',61:'Политическая позиция',
+    62:'Мировоззрение',63:'атеист',64:'Рост',65:'186 см',66:'Размер обуви',67:'Телосложение',68:'социальный консерватор',
+    69:'Ход заполнения формы',70:'Если вам нужна дополнительная информация или у вас есть вопрос, воспользуйтесь формой обратной связи.',
+    71:'Ваши контактные данные',72:'Поля, отмеченные *, обязательны для заполнения.',73:'Имя *',74:'Электронная почта *',75:'Далее',76:'Ваше сообщение',
+    77:'Тема (необязательно)',78:'Сообщение *',79:'Назад',80:'Отправить сообщение',
+    
+    81:'Пожалуйста, проверьте обязательные поля.',
+    82:'Информация о средствах индивидуальной защиты',83:'Если потребуется приобрести средства защиты:',
+    84:'Обычное телосложение / размер L (ориентировочно)',85:'Задачи и основные обязанности',86:'Области деятельности',87:'Навыки работы с программами',
+    88:'Лет профессионального опыта',89:'Лет опыта в металлообработке и машиностроении',90:'Обработка и преобразование облаков точек с последующим импортом в среду Siemens NX.',
+      91:'Пиление и опиливание',92:'Обработка листового металла (гибка, клёпка)',93:'Демонтаж и монтаж ограждений, уличных светильников и столбиков',94:'Ковка',95:'Сварка MAG и WIG',96:'Гидроабразивная резка и пескоструйная обработка',97:'Нанесение антикоррозионных покрытий',98:'Сверление',99:'Нарезание резьбы',100:'По вопросам воспользуйтесь',101:'форма обратной связи',102:'Обработка резанием',103:'Работы с листовым металлом и монтаж',104:'Процессы формообразования и соединения',105:'Управление и пневматика',106:'Обработка поверхности',107:'Сверление и нарезание резьбы',108:'Привет, вот моя фотография!'
+  }
+});
+
+window.localeTranslations = window.localeTranslations || {};
+window.localeTranslations.tr = {
+  0:'Kariyer geçmişi',
+  1:'Yetkinlikler',
+  2:'Gönüllü faaliyetler',
+  3:'Hakkımda',
+  4:'İletişim',
+  5:'İletişime geçin',
+  6:'İçeriğe geç',
+  7:'Yukarı çık ↑',
+  8:'Bu sayfa, mesleki kariyerim, niteliklerim ve teknik yetkinliklerim hakkında genel bir bakış sunar.',
+  9:'Diller',
+  10:'Krefeld · öğrenim devam ediyor',
+  11:'Makine Mühendisliği (B.Eng.)',
+  12:'Düsseldorf · Ağustos 2019 tarihinden bu yana',
+  13:'Teknik Ürün Tasarımcısı eğitimi (IHK Düsseldorf) · tamamlanma: Haziran 2021',
+  14:'Tekil parça, montaj, patlatılmış montaj görünüşü ve yedek parça çizimlerinin hazırlanması',
+  15:'Metal parçalama tesisleri için teklif yerleşimlerinin oluşturulması ve yapılandırılması (malzeme girişi, makine, sonraki prosesler, çıkış).',
+  16:'Teamcenter Active Workspace ortamında tasarım verilerinin bakımı ve yönetimi',
+  17:'Yeni çalışma arkadaşlarının Teamcenter Active Workspace ortamına alıştırılması',
+  18:'Teamcenter Active Workspace ortamında montajların onay sürecinde vekâlet',
+  19:'Lisans yönetimi (vekâleten): Teamcenter hesaplarının oluşturulması ve Siemens Xcelerator üzerinden NX lisanslarının atanması',
+  20:'Teamcenter tasarım verisi özniteliklerinin kontrol edilmesi ve verilerin SAP ERP sistemine aktarılması',
+  21:'Ağustos 2016 – Haziran 2019',
+  22:'Makine mühendisliği alanında devlet onaylı teknik asistan; ayrıca Fachhochschulreife (Fachabitur) sahibi',
+  23:'Uygulamalı eğitim: iTNC 530 ile CNC frezeleme; konvansiyonel tornalama ve frezeleme; Siemens LOGO! ile kontrol sistemleri; Festo FluidSIM ile pnömatik; Autodesk Inventor ile CAD.',
+  24:'Metal işleme alanında işletme stajları',
+  25:'· Ekim–Kasım 2017 ve 2018 · okul eğitimi kapsamında',
+  26:'Uygulamalı işler: testereyle kesme, eğeleme ve delme; sac işleme, bükme ve perçinleme; korkuluk, sokak lambası ve yol babalarının sökülmesi ve montajı; diş açma; dövme; MAG ve WIG kaynağı; su jeti ve kumlama işleri; korozyona karşı koruyucu kaplamaların uygulanması.',
+  27:'Ortaöğretim mezuniyeti',
+  28:'Üretim ve kontrol',
+  29:'CNC frezeleme (iTNC 530)',
+  30:'Konvansiyonel tornalama',
+  31:'Konvansiyonel frezeleme',
+  32:'PLC kontrolü (Siemens LOGO!)',
+  33:'Pnömatik (Festo FluidSIM)',
+  34:'Almanca',
+  35:'Arnavutça',
+  36:'İngilizce',
+  37:'İtalyanca',
+  38:'Akıcı',
+  39:'Temel düzey',
+  40:'İlk yardımcı (RH)',
+  41:'Alman Kızılhaçı · Düsseldorf · üye 2016–2026 · 2016–2020 döneminde aktif görev',
+  42:'Etkinliklerde ambulans gelene kadar ilk yardım ve hasta desteği.',
+  43:'İlk yardım ekipmanlarının kontrolü',
+  44:'Afet koruma görevi için görevlendirildi',
+  45:'Grup toplantılarına ve kurum içi eğitimlere katılım',
+  46:'Hobiler',
+  47:'Parkta koşu',
+  48:'Bisiklete binme',
+  49:'Klasik gitar çalma',
+  50:'Yapay zekâ destekli web tasarımı',
+  51:'Kişisel bilgiler',
+  52:'Yaş',
+  53:'27 yaşında',
+  54:'İkamet yeri',
+  55:'Vatandaşlıklar',
+  56:'Alman ve Arnavut',
+  57:'Medeni durum',
+  58:'Bekâr',
+  59:'Kişisel veriler',
+  60:'Kişisel görüşler',
+  61:'Siyasi görüş',
+  62:'Dünya görüşü',
+  63:'Ateist',
+  64:'Boy',
+  65:'186 cm',
+  66:'Ayakkabı numarası',
+  67:'Vücut yapısı',
+  68:'Toplumsal muhafazakâr',
+  69:'Form ilerlemesi',
+  70:'Daha fazla bilgi almak mı istiyorsunuz veya bir sorunuz mu var? Lütfen iletişim formunu kullanın.',
+  71:'İletişim bilgileriniz',
+  72:'* ile işaretli alanlar zorunludur.',
+  73:'Adınız *',
+  74:'E-posta *',
+  75:'İleri',
+  76:'Mesajınız',
+  77:'Konu (isteğe bağlı)',
+  78:'Mesaj *',
+  79:'Geri',
+  80:'Mesajı gönder',
+  
+  81:'Lütfen zorunlu alanları kontrol edin.',
+  
+  
+  82:'Kişisel koruyucu donanım bilgileri',
+  83:'Koruyucu ekipman temin edilmesi gerekirse:',
+  84:'Normal vücut yapısı / L beden (bağlayıcı değildir)',
+  85:'Görevler ve sorumluluklar',
+  86:'Görev alanları',
+  87:'Yazılım bilgisi',
+  88:'Mesleki deneyim yılı',
+  89:'Metal işleme ve makine mühendisliği deneyimi (yıl)',
+  90:'Nokta bulutlarını işleyip dönüştürme ve Siemens NX ortamına aktarma.',
+  91:'Testereyle kesme ve eğeleme',
+  92:'Sac işleme (bükme, perçinleme)',
+  93:'Korkuluk, sokak lambası ve yol babalarının sökülmesi ve montajı',
+  94:'Dövme',
+  95:'MAG ve WIG kaynağı',
+  96:'Su jeti ve kumlama işleri',
+  97:'Korozyona karşı koruyucu kaplamaların uygulanması',
+  98:'Delme',
+  99:'Diş açma',
+  100:'Sorularınız varsa lütfen şu bağlantıyı kullanın:',
+  101:'İletişim formu',
+  102:'Talaşlı imalat',
+  103:'Sac işleme ve montaj işleri',
+  104:'Şekillendirme ve birleştirme yöntemleri',
+  105:'Kontrol sistemleri ve pnömatik',
+  106:'Yüzey işlemleri',
+  107:'Delme ve diş açma',108:'Merhaba, işte benim bir fotoğrafım!'
+};
+(function () {
+  const translations = {"Werdegang": "Career", "Kompetenzen": "Skills", "Ehrenamt": "Volunteering", "Persönliches": "About me", "Kontakt": "Contact", "Kontakt aufnehmen": "Get in touch", "Zum Inhalt springen": "Skip to content", "Nach oben ↑": "Back to top ↑", "Diese Seite bietet einen Überblick über meinen beruflichen Werdegang, meine Qualifikationen und fachlichen Kompetenzen.": "This page provides an overview of my professional background, qualifications and technical skills.", "Sprachen": "Languages", "Krefeld · laufendes Studium": "Krefeld · currently studying", "Maschinenbau (B.Eng.)": "Mechanical Engineering (B.Eng.)", "Düsseldorf · seit August 2019": "Düsseldorf · since August 2019", "Ausbildung zum Technischen Produktdesigner (IHK Düsseldorf) · Abschluss: Juni 2021": "Training as a Technical Product Designer (IHK Düsseldorf) · completed June 2021", "Erstellung von Einzelteil-, Baugruppen-, Explosions- und Ersatzteilzeichnungen": "Preparing part, assembly, exploded-view and spare-parts drawings", "Angebotslayouts für Shredderanlagen erstellen und konfigurieren (Einlauf, Maschine, Folgeprozesse, Auslauf)": "Create and configure quotation layouts for shredder systems (infeed, machine, downstream processes and discharge).", "Pflege und Verwaltung von Konstruktionsdaten in Teamcenter Active Workspace": "Maintaining and managing engineering data in Teamcenter Active Workspace", "Einarbeitung neuer Kolleginnen und Kollegen in Teamcenter Active Workspace": "Onboarding new colleagues in Teamcenter Active Workspace", "Vertretung bei der Freigabe von Baugruppen in Teamcenter Active Workspace": "Covering assembly approvals in Teamcenter Active Workspace", "Lizenzverwaltung (Vertretung): Teamcenter-Konten anlegen, NX-Lizenzen über Siemens Xcelerator zuweisen": "Deputy license administration: create Teamcenter accounts and assign NX licenses via Siemens Xcelerator.", "Prüfung der Teamcenter-Attribute von Konstruktionsdaten und Übertragung der Daten in das ERP-System SAP": "Checking Teamcenter attributes for engineering data and transferring the data to SAP, the ERP system", "August 2016 – Juni 2019": "August 2016 – June 2019", "Staatlich geprüfter maschinenbautechnischer Assistent mit Fachhochschulreife (Fachabitur)": "State-certified Mechanical Engineering Technical Assistant with advanced technical college entrance qualification (Fachabitur)", "Praxisanteile: CNC-Fräsen mit iTNC 530, konventionelles Drehen und Fräsen, Steuerungstechnik mit Siemens LOGO!, Pneumatik mit Festo FluidSIM sowie CAD mit Autodesk Inventor.": "Practical training included CNC milling with iTNC 530, conventional turning and milling, control systems with Siemens LOGO!, pneumatics with Festo FluidSIM and CAD with Autodesk Inventor.", "Betriebspraktika im Bereich Metalltechnik": "Internships in metalworking", "· Oktober–November 2017 und 2018 · im Rahmen der schulischen Ausbildung": "· October–November 2017 and 2018 · as part of vocational training", "Praktische Tätigkeiten: Sägen, Feilen, Bohren, Blechbearbeitung, Kanten, Nieten, De- und Montage von Geländern, Straßenleuchten und -Pollern, Gewindeschneiden, Schmieden, MAG- und WIG-Schweißen, Wasserstrahl- und Sandstrahlarbeiten sowie das Auftragen von Korrosionsschutzbeschichtungen.": "Practical work included sawing, filing and drilling; sheet-metal work, bending and riveting; dismantling and installing railings, streetlights and bollards; thread cutting; forging; MIG and TIG welding; water-jet cutting and sandblasting; and applying corrosion-protection coatings.", "Mittlerer Schulabschluss": "Intermediate School Certificate (Mittlerer Schulabschluss)", "Fertigung und Steuerung": "Manufacturing and control", "CNC-Fräsen (iTNC 530)": "CNC milling (iTNC 530)", "Konventionelles Drehen": "Conventional turning", "Konventionelles Fräsen": "Conventional milling", "SPS-Steuerung (Siemens LOGO!)": "PLC (Siemens LOGO!)", "Pneumatik (Festo FluidSIM)": "Pneumatics (Festo FluidSIM)", "Deutsch": "German", "Albanisch": "Albanian", "Englisch": "English", "Italienisch": "Italian", "Fließend": "Fluent", "Grundkenntnisse": "Basic", "Sanitäter (RH)": "First aider (RH)", "Deutsches Rotes Kreuz · Düsseldorf · Mitglied 2016–2026 · aktiv im Dienst 2016–2020": "German Red Cross · Düsseldorf · member 2016–2026 · active in service 2016–2020", "Erste Hilfe und Patientenbetreuung bei Veranstaltungen bis zum Eintreffen des Rettungswagens.": "First aid and patient care at events until the ambulance arrives.", "Kontrolle der Sanitätsausstattung": "Checking first-aid equipment", "Für den Katastrophenschutz eingeteilt": "Assigned to disaster response", "Teilnahme an Gruppenabenden und internen Schulungen": "Attending group meetings and internal training", "Hobbys": "Hobbies", "Laufen im Park": "Running in the park", "Fahrradfahren": "Cycling", "Konzertgitarre spielen": "Playing classical guitar", "KI-gestütztes Webdesign": "AI-assisted web design", "Persönliche Informationen": "Personal information", "Alter": "Age", "27 Jahre": "27 years", "Wohnort": "Residence", "Staatsangehörigkeiten": "Citizenships", "deutsch und albanisch": "German and Albanian", "Familienstand": "Marital status", "ledig": "Single", "Persönliche Angaben": "Personal details", "Persönliche Einstellungen": "Personal views", "Politische Haltung": "Political stance", "Weltanschauung": "Worldview", "atheistisch": "Atheist", "Körpergröße": "Height", "186 cm": "186 cm", "Schuhgröße": "Shoe size", "Körperbau": "Build", "sozialkonservativ": "Socially conservative", "Formularfortschritt": "Form progress", "Sie möchten mehr erfahren oder haben eine Frage? Nutzen Sie gern das Kontaktformular.": "For further information or questions, please use the contact form.", "Ihre Kontaktdaten": "Your contact details", "Die mit * gekennzeichneten Felder sind Pflichtfelder.": "Fields marked with * are required.", "Name *": "Name *", "E-Mail *": "Email *", "Weiter": "Next", "Ihre Nachricht": "Your message", "Betreff (optional)": "Subject (optional)", "Nachricht *": "Message *", "Zurück": "Back", "Nachricht senden": "Send message", "Bitte prüfen Sie die Pflichtfelder.": "Please check the required fields.", "PSA-Angaben": "PPE details", "Für den Fall, dass Schutzausrüstung beschafft werden muss:": "If protective equipment needs to be purchased:", "normal / Größe L (unverbindlich)": "Average / Size L (non-binding)", "Aufgaben & Schwerpunkte": "Key responsibilities", "Einsatzbereiche": "Areas of service", "Softwarekenntnisse": "Software skills", "Jahre Berufserfahrung": "Years of professional experience", "Jahre Erfahrung in Metalltechnik und Maschinenbau": "Years of experience in metal technology and mechanical engineering", "Punktwolken bearbeiten, konvertieren und in die Siemens-NX-Umgebung importieren.": "Process and convert point clouds, then import them into the Siemens NX environment.", "Sägen und Feilen": "Sawing and filing", "Blechbearbeitung (Kanten, Nieten)": "Sheet-metal work (bending and riveting)", "De- und Montage von Geländern, Straßenleuchten und -Pollern": "Dismantling and installing railings, streetlights and bollards", "Schmieden": "Forging", "MAG- und WIG-Schweißen": "MAG and TIG welding", "Wasserstrahl- und Sandstrahlarbeiten": "Water-jet cutting and sandblasting", "Auftragen von Korrosionsschutzbeschichtungen": "Applying corrosion-protection coatings", "Bohren": "Drilling", "Gewindeschneiden": "Thread cutting", "Bei Fragen nutzen Sie bitte das": "For questions, please use the", "Kontaktformular": "contact form", "Zerspanung": "Machining", "Blech- und Montagearbeiten": "Sheet-metal and assembly work", "Umform- und Fügeverfahren": "Forming and joining processes", "Steuerung und Pneumatik": "Control systems and pneumatics", "Oberflächenbearbeitung": "Surface treatment", "Bohren und Gewindeschneiden": "Drilling and thread cutting", "Hallo, hier ein Bild von mir!": "Hello, here is a picture of me!", };
+  const localeTranslations = window.localeTranslations || {};
+  const localeNames = { de:'Deutsch', en:'English', fr:'Français', sq:'Shqip', it:'Italiano', ar:'العربية', hi:'हिन्दी', ja:'日本語', 'zh-Hans':'简体中文', ko:'한국어', ru:'Русский', tr:'Türkçe' };
+  const localizedTitles = { de:document.title, en:'Arjan Hoxha – Technical Product Designer', fr:'Arjan Hoxha – Concepteur de produits techniques', sq:'Arjan Hoxha – Projektues teknik i produkteve', it:'Arjan Hoxha – Progettista tecnico di prodotto', ar:'Arjan Hoxha – مصمم منتجات تقني', hi:'Arjan Hoxha – तकनीकी उत्पाद डिज़ाइनर', ja:'Arjan Hoxha – 技術製品設計者', 'zh-Hans':'Arjan Hoxha – 技术产品设计师', ko:'Arjan Hoxha – 기술 제품 디자이너', ru:'Arjan Hoxha – технический проектировщик продукции', tr:'Arjan Hoxha – Teknik Ürün Tasarımcısı' };
+  const languageSelect = document.getElementById('lang');
+  const originalKeys = Object.keys(translations);
+  const keyIndex = new Map(originalKeys.map((text, index) => [text, index]));
+  const nodes = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    const text = node.nodeValue.trim();
+    const isLanguageOption = node.parentElement && node.parentElement.closest('#lang');
+    if (keyIndex.has(text) && !isLanguageOption) nodes.push([node, node.nodeValue, text]);
+  }
+  const ariaKeys = ['Weitere Informationen zur Hochschule Niederrhein','Weitere Informationen zum Studienverlauf Maschinenbau','Weitere Informationen zu LINDEMANN Metal Recycling','Weitere Informationen zum Franz-Jürgens-Berufskolleg','Weitere Informationen zur Netzgesellschaft Düsseldorf','Weitere Informationen zur Fritz-Henkel-Schule Düsseldorf','Weitere Informationen zum DRK Düsseldorf','Formularfortschritt','Weitere Informationen zum Bildungsgang am TBKF'];
+  const ariaTranslationsByLanguage = {
+    en:['More information about Hochschule Niederrhein','More information about the Mechanical Engineering study plan','More information about LINDEMANN Metal Recycling','More information about Franz-Jürgens Technical College','More information about Netzgesellschaft Düsseldorf','More information about Fritz-Henkel-Schule Düsseldorf','More information about German Red Cross Düsseldorf','Form progress','More information about the TBKF course'],
+    fr:['Plus d’informations sur la Hochschule Niederrhein','Plus d’informations sur le cursus de génie mécanique','Plus d’informations sur LINDEMANN Metal Recycling','Plus d’informations sur le Franz-Jürgens-Berufskolleg','Plus d’informations sur Netzgesellschaft Düsseldorf','Plus d’informations sur la Fritz-Henkel-Schule Düsseldorf','Plus d’informations sur la Croix-Rouge allemande de Düsseldorf','Progression du formulaire','Informations sur la formation au TBKF'],
+    sq:['Më shumë informacion për Hochschule Niederrhein','Më shumë informacion për planin e studimeve të inxhinierisë mekanike','Më shumë informacion për LINDEMANN Metal Recycling','Më shumë informacion për Franz-Jürgens-Berufskolleg','Më shumë informacion për Netzgesellschaft Düsseldorf','Më shumë informacion për Fritz-Henkel-Schule Düsseldorf','Më shumë informacion për Kryqin e Kuq Gjerman në Düsseldorf','Përparimi i formularit','Më shumë informacion për programin e studimit në TBKF'],
+    it:['Maggiori informazioni sulla Hochschule Niederrhein','Maggiori informazioni sul piano di studi di ingegneria meccanica','Maggiori informazioni su LINDEMANN Metal Recycling','Maggiori informazioni sul Franz-Jürgens-Berufskolleg','Maggiori informazioni su Netzgesellschaft Düsseldorf','Maggiori informazioni sulla Fritz-Henkel-Schule Düsseldorf','Maggiori informazioni sulla Croce Rossa Tedesca di Düsseldorf','Avanzamento del modulo','Maggiori informazioni sul percorso di studi presso TBKF'],
+    ar:['معلومات إضافية عن Hochschule Niederrhein','معلومات إضافية عن خطة دراسة الهندسة الميكانيكية','معلومات إضافية عن LINDEMANN Metal Recycling','معلومات إضافية عن Franz-Jürgens-Berufskolleg','معلومات إضافية عن Netzgesellschaft Düsseldorf','معلومات إضافية عن Fritz-Henkel-Schule Düsseldorf','معلومات إضافية عن الصليب الأحمر الألماني في دوسلدورف','تقدم النموذج','معلومات إضافية عن البرنامج الدراسي في TBKF'],
+    hi:['Hochschule Niederrhein के बारे में अधिक जानकारी','मैकेनिकल इंजीनियरिंग अध्ययन योजना के बारे में अधिक जानकारी','LINDEMANN Metal Recycling के बारे में अधिक जानकारी','Franz-Jürgens-Berufskolleg के बारे में अधिक जानकारी','Netzgesellschaft Düsseldorf के बारे में अधिक जानकारी','Fritz-Henkel-Schule Düsseldorf के बारे में अधिक जानकारी','डसेलडॉर्फ जर्मन रेड क्रॉस के बारे में अधिक जानकारी','फ़ॉर्म की प्रगति','TBKF के पाठ्यक्रम के बारे में अधिक जानकारी'],
+    ja:['Hochschule Niederrheinの詳細情報','機械工学の履修計画の詳細情報','LINDEMANN Metal Recyclingの詳細情報','Franz-Jürgens-Berufskollegの詳細情報','Netzgesellschaft Düsseldorfの詳細情報','Fritz-Henkel-Schule Düsseldorfの詳細情報','ドイツ赤十字デュッセルドルフの詳細情報','フォームの進行状況','TBKFの教育課程の詳細'],
+    'zh-Hans':['了解 Hochschule Niederrhein 的更多信息','了解机械工程课程计划的更多信息','了解 LINDEMANN Metal Recycling 的更多信息','了解 Franz-Jürgens-Berufskolleg 的更多信息','了解 Netzgesellschaft Düsseldorf 的更多信息','了解 Fritz-Henkel-Schule Düsseldorf 的更多信息','了解杜塞尔多夫德国红十字会的更多信息','表单进度','了解 TBKF 课程的更多信息'],
+    ko:['Hochschule Niederrhein 자세히 보기','기계공학 교육과정 자세히 보기','LINDEMANN Metal Recycling 자세히 보기','Franz-Jürgens-Berufskolleg 자세히 보기','Netzgesellschaft Düsseldorf 자세히 보기','Fritz-Henkel-Schule Düsseldorf 자세히 보기','뒤셀도르프 독일 적십자 자세히 보기','양식 진행률','TBKF 교육과정 자세히 보기'],
+    ru:['Подробнее о Hochschule Niederrhein','Подробнее о плане обучения машиностроению','Подробнее о LINDEMANN Metal Recycling','Подробнее о Franz-Jürgens-Berufskolleg','Подробнее о Netzgesellschaft Düsseldorf','Подробнее о Fritz-Henkel-Schule Düsseldorf','Подробнее о Немецком Красном Кресте в Дюссельдорфе','Ход заполнения формы','Подробнее о программе обучения в TBKF'],
+    tr:['Hochschule Niederrhein hakkında daha fazla bilgi','Makine Mühendisliği eğitim planı hakkında daha fazla bilgi','LINDEMANN Metal Recycling hakkında daha fazla bilgi','Franz-Jürgens-Berufskolleg hakkında daha fazla bilgi','Netzgesellschaft Düsseldorf hakkında daha fazla bilgi','Fritz-Henkel-Schule Düsseldorf hakkında daha fazla bilgi','Düsseldorf Alman Kızılhaçı hakkında daha fazla bilgi','Form ilerlemesi','TBKF eğitim programı hakkında daha fazla bilgi']
+  };
+  const attrNodes = [];
+  document.querySelectorAll('[title], [aria-label]').forEach(element => {
+    const title = element.getAttribute('title');
+    const label = element.getAttribute('aria-label');
+    const ti = ariaKeys.indexOf(title);
+    const li = ariaKeys.indexOf(label);
+    if (ti >= 0 || li >= 0) attrNodes.push([element, title, label, ti, li]);
+  });
+  let activeLanguage = 'de';
+  function translatePageText(text, language = activeLanguage) {
+    if (language === 'de') return text;
+    const index = keyIndex.get(text);
+    if (language === 'en') return translations[text] || text;
+    return (index !== undefined && localeTranslations[language] && localeTranslations[language][index]) || translations[text] || text;
+  }
+  window.translatePageText = translatePageText;
+  function setLanguage(language) {
+    if (!localeNames[language]) language = 'de';
+    activeLanguage = language;
+    nodes.forEach(([node, originalNodeText, key]) => { node.nodeValue = originalNodeText.replace(key, translatePageText(key, language)); });
+    attrNodes.forEach(([element, title, label, ti, li]) => {
+      const localized = ariaTranslationsByLanguage[language];
+      if (title !== null && ti >= 0 && localized) element.setAttribute('title', localized[ti]);
+      else if (title !== null && language === 'de') element.setAttribute('title', title);
+      if (label !== null && li >= 0 && localized) element.setAttribute('aria-label', localized[li]);
+      else if (label !== null && language === 'de') element.setAttribute('aria-label', label);
+    });
+    document.documentElement.lang = language;
+    document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+    document.title = localizedTitles[language] || localizedTitles.de;
+    languageSelect.value = language;
+    const labels = { de:'Sprache wählen', en:'Choose language', fr:'Choisir la langue', sq:'Zgjidhni gjuhën', it:'Scegli la lingua', ar:'اختر اللغة', hi:'भाषा चुनें', ja:'言語を選択', 'zh-Hans':'选择语言', ko:'언어 선택', ru:'Выбрать язык', tr:'Dil seçin' };
+    languageSelect.setAttribute('aria-label', labels[language]);
+    try { localStorage.setItem('lang', language); } catch (error) {}
+    if (typeof window.updateAgeDisplay === 'function') window.updateAgeDisplay();
+  }
+  languageSelect.addEventListener('change', () => setLanguage(languageSelect.value));
+  let savedLanguage = null;
+  try { savedLanguage = localStorage.getItem('lang'); } catch (error) {}
+  setLanguage(location.hash === '#en' ? 'en' : (savedLanguage || 'de'));
+})();
+
+  
+/* ---------- 3. Kontaktformular (zweistufig) ---------- */
+(function () {
+  const form = document.getElementById('contact-form');
+  if (!form) return;
+  const steps = [document.getElementById('step1'), document.getElementById('step2')];
+  const progress = [document.getElementById('p1'), document.getElementById('p2')];
+  const status = document.getElementById('form-status');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const messages = {
+    ok:   { de: 'Vielen Dank! Ihre Nachricht wurde gesendet.', en: 'Thank you! Your message has been sent.' },
+    fail: { de: 'Senden fehlgeschlagen. Bitte versuchen Sie es später erneut.', en: 'Sending failed. Please try again later.' }
+  };
+  const message = key => messages[key][document.documentElement.lang] || messages[key].en;
+  let currentStep = 1;
+
+  function showStep(number, focus = true) {
+    currentStep = number;
+    steps.forEach((step, i) => { step.hidden = i !== number - 1; });
+    progress.forEach((item, i) => {
+      item.classList.toggle('on', i === number - 1);
+      if (i === number - 1) item.setAttribute('aria-current', 'step'); else item.removeAttribute('aria-current');
+    });
+    if (focus) steps[number - 1].querySelector('input').focus();
+  }
+  function setStatus(text, type) {
+    status.textContent = text;
+    status.className = 'form-status' + (type ? ' ' + type : '');
+  }
+  function validate(fieldset) {
+    const invalid = Array.from(fieldset.querySelectorAll('input, textarea')).find(field => !field.checkValidity());
+    if (!invalid) return true;
+    invalid.reportValidity();
+    invalid.focus();
+    return false;
+  }
+
+  document.getElementById('next').addEventListener('click', () => { if (validate(steps[0])) showStep(2); });
+  document.getElementById('back').addEventListener('click', () => showStep(1));
+
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    if (currentStep === 1) { if (validate(steps[0])) showStep(2); return; }
+    if (!validate(steps[1])) return;
+
+    const endpoint = form.dataset.endpoint;
+    submitButton.disabled = true;
+    setStatus('', '');
+    try {
+      const response = await fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      form.reset();
+      showStep(1, false);
+      setStatus(message('ok'), 'ok');
+    } catch (error) {
+      setStatus(message('fail'), 'err');
+    } finally {
+      submitButton.disabled = false;
+    }
+  });
+})();
+
+/* ---------- 4. Dynamische Werte: Alter, Berufsjahre, Copyright-Jahr ---------- */
+(function () {
+  const ageValue = document.getElementById('age-value');
+  const experienceFields = document.querySelectorAll('[data-years-since]');
+  const yearField = document.getElementById('current-year');
+  const ageLabels = {
+    de: n => n + ' Jahre', en: n => n + ' years', fr: n => n + ' ans', sq: n => n + ' vjeç', it: n => n + ' anni',
+    ar: n => n + ' عامًا', hi: n => n + ' वर्ष', ja: n => n + '歳', 'zh-Hans': n => n + '岁', ko: n => n + '세',
+    ru: n => {
+      const lastTwo = n % 100, last = n % 10;
+      return n + ' ' + (last === 1 && lastTwo !== 11 ? 'год' : (last >= 2 && last <= 4 && (lastTwo < 12 || lastTwo > 14) ? 'года' : 'лет'));
+    },
+    tr: n => n + ' yaşında'
+  };
+  function yearsSince(dateString, today) {
+    const [year, month, day] = dateString.split('-').map(Number);
+    let years = today.getFullYear() - year;
+    if (today.getMonth() < month - 1 || (today.getMonth() === month - 1 && today.getDate() < day)) years--;
+    return Math.max(0, years);
+  }
+  function update() {
+    const today = new Date();
+    if (ageValue) {
+      const age = yearsSince(ageValue.dataset.birthDate, today);
+      ageValue.textContent = (ageLabels[document.documentElement.lang] || ageLabels.de)(age);
+    }
+    experienceFields.forEach(field => { field.textContent = yearsSince(field.dataset.yearsSince, today) + '+'; });
+    if (yearField) yearField.textContent = String(today.getFullYear());
+  }
+  window.updateAgeDisplay = update;   // wird beim Sprachwechsel aufgerufen
+  update();
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) update(); });
+})();
+
+/* ---------- 5. Drucken: Aufklapp-Bereiche vorübergehend öffnen ---------- */
+(function () {
+  let reopened = [];
+  window.addEventListener('beforeprint', () => {
+    reopened = Array.from(document.querySelectorAll('details:not([open])'));
+    reopened.forEach(d => { d.open = true; });
+  });
+  window.addEventListener('afterprint', () => { reopened.forEach(d => { d.open = false; }); reopened = []; });
+})();
+</script>
+</body>
+</html>
