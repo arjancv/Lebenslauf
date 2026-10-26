@@ -272,6 +272,112 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
   .item, .card, .stat { break-inside: avoid; }
   a { text-decoration: none; }
 }
+
+/* ===== 10. Animationen ===== */
+@keyframes rvUp { from { opacity: 0; transform: translateY(28px); } }
+@keyframes rvL { from { opacity: 0; transform: translateX(-34px); } }
+@keyframes rvS { from { opacity: 0; transform: translateY(20px) scale(.92); } }
+@keyframes rvP { from { opacity: 0; transform: scale(.55) translateY(8px); } }
+@keyframes navIn { from { opacity: 0; transform: translateY(-100%); } }
+@keyframes shine { to { background-position: -200% 0; } }
+@keyframes drift1 { to { transform: translate(14vw, 18vh) scale(1.25); } }
+@keyframes drift2 { to { transform: translate(-16vw, -14vh) scale(1.2); } }
+@keyframes ring { 0% { transform: scale(1); opacity: .9; } 80%, 100% { transform: scale(2.8); opacity: 0; } }
+@keyframes wig { 0% { transform: rotate(0) scale(1); } 25% { transform: rotate(-16deg) scale(1.25); } 55% { transform: rotate(12deg) scale(1.15); } 100% { transform: rotate(0) scale(1); } }
+@keyframes foldIn { from { opacity: 0; transform: translateY(-10px); } }
+@keyframes spin { from { transform: rotate(-180deg) scale(.4); } }
+@keyframes stepIn { from { opacity: 0; transform: translateX(26px); } }
+@keyframes pop { 0% { opacity: 0; transform: scale(.9) translateY(6px); } 60% { transform: scale(1.03); } }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 220, 85, .55); } 70%, 100% { box-shadow: 0 0 0 14px rgba(255, 220, 85, 0); } }
+@keyframes float { 50% { transform: translateY(-9px); } }
+@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 220, 85, 0); } 50% { box-shadow: 0 0 30px 3px rgba(255, 220, 85, .28); } }
+@keyframes bob { 50% { transform: translateY(-4px); } }
+
+/* Seitenstart */
+nav { animation: navIn .7s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero h1 { animation: rvUp .9s .1s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero .wrap > p { animation: rvUp .8s .35s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero .wrap > p.hero-contact { animation-delay: .5s; }
+.hero h1 span { background: linear-gradient(90deg, var(--accent) 0%, #fff7c2 25%, var(--accent) 50%, #56d5ff 75%, var(--accent) 100%) 0 0 / 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: shine 5s linear infinite; }
+
+/* Schwebende Hintergrund-Lichter & Fortschrittsbalken */
+body::before, body::after { content: ""; position: fixed; z-index: -1; width: 46vmax; height: 46vmax; border-radius: 50%; pointer-events: none; }
+body::before { top: -18vmax; left: -14vmax; background: radial-gradient(circle, rgba(86, 213, 255, .14), transparent 65%); animation: drift1 24s ease-in-out infinite alternate; }
+body::after { right: -16vmax; bottom: -20vmax; background: radial-gradient(circle, rgba(255, 220, 85, .1), transparent 65%); animation: drift2 28s ease-in-out infinite alternate; }
+.sp { position: fixed; top: 0; left: 0; z-index: 30; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), #56d5ff); transform: scaleX(0); transform-origin: left; pointer-events: none; }
+
+/* Scroll-Reveal (Klassen setzt das Skript) */
+html.js .rv { opacity: 0; }
+html.js .rv.in { opacity: 1; animation: rvUp .8s cubic-bezier(.2, .7, .2, 1) var(--d, 0s) backwards; }
+html.js .rv-l.in { animation-name: rvL; }
+html.js .rv-s.in { animation-name: rvS; }
+html.js .rv-p.in { animation: rvP .5s cubic-bezier(.3, 1.5, .5, 1) var(--d, 0s) backwards; }
+html.js section h2::after { transform: scaleX(0); transform-origin: left; transition: transform .7s .4s cubic-bezier(.2, .7, .2, 1); }
+html.js section h2.in::after { transform: none; }
+section h2.in .heading-icon { animation: wig .9s .3s; }
+
+/* Timeline: pulsierende Punkte */
+.item::before { transition: transform .25s; }
+.item:hover::before { transform: scale(1.35); }
+.item::after { position: absolute; top: 7px; inset-inline-start: -31px; width: 12px; height: 12px; border: 2px solid var(--accent); border-radius: 50%; pointer-events: none; animation: ring 2.6s ease-out infinite; content: ""; }
+.item:nth-child(2)::after { animation-delay: .5s; }
+.item:nth-child(3)::after { animation-delay: 1s; }
+.item:nth-child(4)::after { animation-delay: 1.5s; }
+.item h3 { transition: color .2s, transform .25s; }
+.item:hover h3 { color: var(--accent); transform: translateX(5px); }
+
+/* Hover-Effekte */
+nav a { position: relative; transition: color .2s; }
+nav a::after { position: absolute; inset-inline: 0; bottom: 2px; height: 2px; background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .3s; content: ""; }
+nav a:hover::after, nav a.on::after { transform: scaleX(1); }
+.card, .stat, .personal-group { position: relative; transition: transform .28s cubic-bezier(.2, .7, .2, 1), border-color .28s, box-shadow .28s; }
+.card:hover, .stat:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 16px 36px rgba(255, 220, 85, .14); }
+.card::after, .stat::after, .personal-group::after { position: absolute; inset: 0; border-radius: inherit; background: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), rgba(255, 220, 85, .13), transparent 65%); opacity: 0; pointer-events: none; transition: opacity .3s; content: ""; }
+.card:hover::after, .stat:hover::after, .personal-group:hover::after { opacity: 1; }
+.stat b { transition: transform .3s; }
+.stat:hover b { transform: scale(1.12); }
+.chip { transition: transform .2s, background .2s, color .2s, border-color .2s; }
+.chip:hover { transform: translateY(-3px) scale(1.07); border-color: var(--accent); background: var(--accent); color: #07152b; }
+.kv-row { transition: padding .22s, background .22s; }
+.kv-row:hover { padding-inline-start: 8px; background: rgba(255, 220, 85, .06); }
+.org-link { transition: color .18s, border-color .18s, background .18s, transform .25s; }
+.org-link:hover { transform: translateY(-2px) rotate(12deg) scale(1.12); }
+.btn { position: relative; overflow: hidden; }
+.btn::after { position: absolute; inset: 0; background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .38) 50%, transparent 70%); transform: translateX(-120%); pointer-events: none; content: ""; }
+.btn:hover::after { transform: translateX(120%); transition: transform .65s; }
+.contact-panel #next { animation: pulse 2.2s infinite; }
+.contact-panel #next:hover { animation-play-state: paused; }
+footer a[href="#main"] { display: inline-block; transition: transform .25s, color .2s; }
+footer a[href="#main"]:hover { transform: translateY(-4px); }
+
+/* Aufklapp-Bereiche & Formular */
+.fold > summary::after { display: inline-block; transition: transform .25s; }
+.fold > summary:hover::after { transform: scale(1.3); }
+.fold[open] > summary::after { animation: spin .4s; }
+.fold[open] > :not(summary) { animation: foldIn .45s cubic-bezier(.2, .7, .2, 1) backwards; }
+.form-progress li { transition: color .35s, border-color .35s; }
+.contact-form fieldset:not([hidden]) { animation: stepIn .45s cubic-bezier(.2, .7, .2, 1); }
+.contact-form input, .contact-form textarea { transition: border-color .2s, box-shadow .25s, transform .2s; }
+.contact-form input:focus, .contact-form textarea:focus { box-shadow: 0 0 0 5px rgba(255, 220, 85, .16); transform: translateY(-1px); }
+.form-status:not(:empty) { animation: pop .45s; }
+
+/* Foto */
+.contact-profile-photo { animation: float 5s ease-in-out infinite, glow 3.2s ease-in-out infinite; }
+.contact-photo-label svg { animation: bob 1.4s ease-in-out infinite; }
+
+@media print {
+  body::before, body::after, .sp { display: none; }
+  html.js .rv { opacity: 1 !important; animation: none !important; }
+  html.js section h2::after { transform: none; }
+  .item::after { display: none; }
+}
+
+/* ===== 11. 3D-Modell im Hero ===== */
+.hero-3d { float: right; float: inline-end; width: clamp(110px, 24vw, 240px); aspect-ratio: 1; margin-block: -8px 10px; margin-inline-start: 18px; shape-outside: circle(50%); animation: rvS 1s .25s cubic-bezier(.2, .7, .2, 1) backwards; }
+.hero-3d canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+.hero .stats { clear: both; }
+@media (max-width: 360px) { .hero h1 { font-size: 24px; } }
+@media print { .hero-3d { display: none; } }
 </style>
 </head>
 <body>
@@ -279,6 +385,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 <nav aria-label="Hauptnavigation"><div class="wrap"><a href="#erfahrung">Werdegang</a><a href="#kompetenzen">Kompetenzen</a><a href="#ehrenamt">Ehrenamt</a><a href="#persoenliches">Persönliches</a><a href="#kontakt">Kontakt</a><select id="lang" translate="no" aria-label="Sprache wählen" title="Sprache wählen"><option value="de">Deutsch</option><option value="en">English</option><option value="fr">Français</option><option value="sq">Shqip</option><option value="it">Italiano</option><option value="ar">العربية</option><option value="hi">हिन्दी</option><option value="ja">日本語</option><option value="zh-Hans">简体中文</option><option value="ko">한국어</option><option value="ru">Русский</option><option value="tr">Türkçe</option></select></div></nav>
 
 <main id="main"><header class="hero"><div class="wrap">
+<div class="hero-3d" aria-hidden="true"><canvas id="gears3d"></canvas></div>
 
 <div class="hero-copy">
 <h1>Arjan <span>Hoxha</span></h1>
@@ -1005,6 +1112,177 @@ window.localeTranslations.tr = {
     reopened.forEach(d => { d.open = true; });
   });
   window.addEventListener('afterprint', () => { reopened.forEach(d => { d.open = false; }); reopened = []; });
+})();
+</script>
+<script>
+/* ---------- 6. Animationen: Scroll-Reveal, Zähler, Fortschrittsbalken, Spotlight ---------- */
+(function () {
+  const root = document.documentElement;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const bar = document.createElement('div');
+  bar.className = 'sp';
+  bar.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(bar);
+  function progress() {
+    const h = root.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? Math.min(scrollY / h, 1) : 0) + ')';
+  }
+  addEventListener('scroll', progress, { passive: true });
+  addEventListener('resize', progress);
+  progress();
+
+  document.addEventListener('pointermove', e => {
+    const t = e.target.closest && e.target.closest('.card, .stat, .personal-group');
+    if (!t) return;
+    const r = t.getBoundingClientRect();
+    t.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    t.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+
+  function countUp(el) {
+    const m = el && /^(\d+)(.*)$/.exec(el.textContent.trim());
+    if (!m || reduce) return;
+    const to = +m[1], suffix = m[2], start = performance.now(), dur = 1500;
+    (function step(now) {
+      const k = Math.min((now - start) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))) + suffix;
+      if (k < 1) requestAnimationFrame(step);
+    })(start);
+  }
+
+  if (!('IntersectionObserver' in window)) return;
+  root.classList.add('js');
+  const groups = [
+    ['section h2', 'rv', .07], ['.item, .sub, .skill-category-title, .kv-row', 'rv rv-l', .07],
+    ['.card, .stat, .contact-panel, .personal-group, .contact-photo-wrap, .fold:not(.hobbies-fold)', 'rv rv-s', .1],
+    ['.chip', 'rv rv-p', .035]
+  ];
+  const io = new IntersectionObserver(entries => entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    entry.target.classList.add('in');
+    io.unobserve(entry.target);
+    if (entry.target.classList.contains('stat')) countUp(entry.target.querySelector('b'));
+  }), { threshold: .12, rootMargin: '0px 0px -5% 0px' });
+  groups.forEach(([selector, classes, step]) => document.querySelectorAll(selector).forEach(el => {
+    const i = Array.prototype.indexOf.call(el.parentNode.children, el);
+    el.style.setProperty('--d', Math.min(i * step, .6) + 's');
+    el.classList.add(...classes.split(' '));
+    io.observe(el);
+  }));
+})();
+</script>
+<script>
+/* ---------- 7. 3D-Modell: ineinandergreifende Zahnräder (Canvas, ohne externe Bibliothek) ---------- */
+(function () {
+  const cv = document.getElementById('gears3d');
+  const ctx = cv && cv.getContext('2d');
+  if (!ctx) return;
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const TAU = Math.PI * 2, HZ = .17, DIST = 7, L = [-.4, .55, .73];
+  const circle = (R, n, cx, cy) => Array.from({ length: n }, (_, i) => [cx + R * Math.cos(i * TAU / n), cy + R * Math.sin(i * TAU / n)]);
+
+  function makeGear(N, r, bore, holeN, holeR, holeAt, color, x) {
+    const m = 2 * r / N, tip = r + m * .9, root = r - m * 1.1, p = TAU / N, out = [];
+    for (let k = 0; k < N; k++) [[root, -.32], [tip, -.14], [tip, .14], [root, .32]].forEach(([R, f]) => { const a = (k + f) * p; out.push([R * Math.cos(a), R * Math.sin(a)]); });
+    const holes = [circle(bore, 14, 0, 0)];
+    for (let i = 0; i < holeN; i++) { const a = i * TAU / holeN; holes.push(circle(holeR, 10, holeAt * Math.cos(a), holeAt * Math.sin(a))); }
+    const sides = out.map((a, i) => { const b = out[(i + 1) % out.length], dx = b[0] - a[0], dy = b[1] - a[1], l = Math.hypot(dx, dy); return { a, b, n: [dy / l, -dx / l] }; });
+    return { N, color, x, out, holes, sides };
+  }
+  const gA = makeGear(16, 1, .2, 5, .17, .6, [255, 220, 85], -.9);
+  const gB = makeGear(10, .625, .13, 3, .09, .3, [86, 213, 255], .725);
+
+  let W = 1, H = 1, dpr = 1, t = 0, ang = 0, spd = .7, tgt = .7, offX = 0, offY = 0, moved = 0;
+  let drag = false, lx = 0, ly = 0, vis = true, running = false, last = 0;
+
+  function render() {
+    const ease = reduce ? 1 : 1 - Math.pow(1 - Math.min(t / 1.6, 1), 3);
+    const ry = .55 + .35 * Math.sin(t * .35) + scrollY * .0012 + offY + (1 - ease) * 3.2;
+    const rx = -.42 + .12 * Math.sin(t * .5) + offX;
+    const sy = Math.sin(ry), cy = Math.cos(ry), sx = Math.sin(rx), cx = Math.cos(rx);
+    const R = (x, y, z) => { const x1 = x * cy + z * sy, z1 = -x * sy + z * cy; return [x1, y * cx - z1 * sx, y * sx + z1 * cx]; };
+    const sc = Math.min(W, H) * .215 * (.35 + .65 * ease);
+    const P = v => { const k = DIST / (DIST - v[2]); return [W / 2 + v[0] * k * sc, H / 2 - v[1] * k * sc]; };
+
+    ctx.clearRect(0, 0, W, H);
+    const glow = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, W * .5);
+    glow.addColorStop(0, 'rgba(86,213,255,.16)');
+    glow.addColorStop(1, 'rgba(86,213,255,0)');
+    ctx.fillStyle = glow;
+    ctx.fillRect(0, 0, W, H);
+
+    const items = [];
+    [[gA, ang], [gB, Math.PI + Math.PI / gB.N - ang * gA.N / gB.N]].forEach(([g, a]) => {
+      const ca = Math.cos(a), sa = Math.sin(a);
+      const loc = (p, z) => R(g.x + p[0] * ca - p[1] * sa, p[0] * sa + p[1] * ca, z);
+      const col = n => {
+        const s = .3 + .7 * Math.max(0, n[0] * L[0] + n[1] * L[1] + n[2] * L[2]);
+        return 'rgb(' + g.color.map(c => Math.round(c * s)).join() + ')';
+      };
+      const nf = R(0, 0, 1), sgn = nf[2] > 0 ? 1 : -1;
+      items.push({
+        cap: true, z: loc([0, 0], sgn * HZ)[2], fill: col([nf[0] * sgn, nf[1] * sgn, nf[2] * sgn]),
+        rings: [g.out].concat(g.holes).map(ring => ring.map(p => P(loc(p, sgn * HZ))))
+      });
+      g.sides.forEach(s => {
+        const n = R(s.n[0] * ca - s.n[1] * sa, s.n[0] * sa + s.n[1] * ca, 0);
+        if (n[2] <= 0) return;
+        const q = [loc(s.a, HZ), loc(s.b, HZ), loc(s.b, -HZ), loc(s.a, -HZ)];
+        items.push({ z: (q[0][2] + q[1][2] + q[2][2] + q[3][2]) / 4, fill: col(n), rings: [q.map(P)] });
+      });
+    });
+    items.sort((p, q) => p.z - q.z);
+    ctx.lineJoin = 'round';
+    items.forEach(it => {
+      ctx.beginPath();
+      it.rings.forEach(ring => { ring.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.closePath(); });
+      ctx.fillStyle = it.fill;
+      ctx.fill('evenodd');
+      ctx.strokeStyle = it.cap ? 'rgba(7,21,43,.75)' : it.fill;
+      ctx.lineWidth = (it.cap ? 1.3 : .8) * dpr;
+      ctx.stroke();
+    });
+  }
+
+  function loop(now) {
+    if (!vis || document.hidden) { running = false; return; }
+    const dt = Math.min((now - last) / 1000, .05);
+    last = now; t += dt;
+    spd += (tgt - spd) * Math.min(1, dt * 4);
+    ang += spd * dt;
+    if (!drag) { const k = Math.min(1, dt * .8); offX -= offX * k; offY -= offY * k; }
+    render();
+    requestAnimationFrame(loop);
+  }
+  function start() { if (!running && !reduce && vis && !document.hidden) { running = true; last = performance.now(); requestAnimationFrame(loop); } }
+  function size() {
+    const r = cv.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = cv.width = Math.max(1, Math.round(r.width * dpr));
+    H = cv.height = Math.max(1, Math.round(r.height * dpr));
+    if (!running) render();
+  }
+
+  cv.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') tgt = 2.4; });
+  cv.addEventListener('pointerleave', () => { tgt = .7; });
+  cv.addEventListener('pointerdown', e => { drag = true; moved = 0; lx = e.clientX; ly = e.clientY; cv.setPointerCapture(e.pointerId); cv.style.cursor = 'grabbing'; });
+  cv.addEventListener('pointermove', e => {
+    if (!drag) return;
+    const dx = e.clientX - lx, dy = e.clientY - ly;
+    moved += Math.abs(dx) + Math.abs(dy);
+    offY += dx * .012;
+    offX = Math.max(-1, Math.min(1, offX + dy * .01));
+    lx = e.clientX; ly = e.clientY;
+    if (!running) render();
+  });
+  const end = () => { if (drag && moved < 5) spd += 7; drag = false; cv.style.cursor = ''; };
+  cv.addEventListener('pointerup', end);
+  cv.addEventListener('pointercancel', () => { drag = false; cv.style.cursor = ''; });
+  new IntersectionObserver(es => { vis = es[0].isIntersecting; start(); }).observe(cv);
+  document.addEventListener('visibilitychange', start);
+  addEventListener('resize', size);
+  size();
+  start();
 })();
 </script>
 </body>
