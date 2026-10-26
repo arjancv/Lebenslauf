@@ -290,7 +290,6 @@ a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px soli
 @keyframes pop { 0% { opacity: 0; transform: scale(.9) translateY(6px); } 60% { transform: scale(1.03); } }
 @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(255, 220, 85, .55); } 70%, 100% { box-shadow: 0 0 0 14px rgba(255, 220, 85, 0); } }
 @keyframes float { 50% { transform: translateY(-9px); } }
-@keyframes glow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255, 220, 85, 0); } 50% { box-shadow: 0 0 30px 3px rgba(255, 220, 85, .28); } }
 @keyframes bob { 50% { transform: translateY(-4px); } }
 
 /* Seitenstart */
@@ -301,9 +300,8 @@ nav { animation: navIn .7s cubic-bezier(.2, .7, .2, 1) backwards; }
 .hero h1 span { background: linear-gradient(90deg, var(--accent) 0%, #fff7c2 25%, var(--accent) 50%, #56d5ff 75%, var(--accent) 100%) 0 0 / 200% 100%; -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: transparent; animation: shine 5s linear infinite; }
 
 /* Schwebende Hintergrund-Lichter & Fortschrittsbalken */
-body::before, body::after { content: ""; position: fixed; z-index: -1; width: 46vmax; height: 46vmax; border-radius: 50%; pointer-events: none; }
+body::before { content: ""; position: fixed; z-index: -1; width: 46vmax; height: 46vmax; border-radius: 50%; pointer-events: none; }
 body::before { top: -18vmax; left: -14vmax; background: radial-gradient(circle, rgba(86, 213, 255, .14), transparent 65%); animation: drift1 24s ease-in-out infinite alternate; }
-body::after { right: -16vmax; bottom: -20vmax; background: radial-gradient(circle, rgba(255, 220, 85, .1), transparent 65%); animation: drift2 28s ease-in-out infinite alternate; }
 .sp { position: fixed; top: 0; left: 0; z-index: 30; width: 100%; height: 3px; background: linear-gradient(90deg, var(--accent), #56d5ff); transform: scaleX(0); transform-origin: left; pointer-events: none; }
 
 /* Scroll-Reveal (Klassen setzt das Skript) */
@@ -362,7 +360,7 @@ footer a[href="#main"]:hover { transform: translateY(-4px); }
 .form-status:not(:empty) { animation: pop .45s; }
 
 /* Foto */
-.contact-profile-photo { animation: float 5s ease-in-out infinite, glow 3.2s ease-in-out infinite; }
+.contact-profile-photo { animation: float 5s ease-in-out infinite; }
 .contact-photo-label svg { animation: bob 1.4s ease-in-out infinite; }
 
 @media print {
@@ -1172,27 +1170,54 @@ window.localeTranslations.tr = {
 })();
 </script>
 <script>
-/* ---------- 7. 3D-Modell: ineinandergreifende Zahnräder (Canvas, ohne externe Bibliothek) ---------- */
+/* ---------- 7. 3D-Modell: Evolventen-Zahnräder auf Wellen (Canvas, ohne externe Bibliothek) ---------- */
 (function () {
   const cv = document.getElementById('gears3d');
   const ctx = cv && cv.getContext('2d');
   if (!ctx) return;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const TAU = Math.PI * 2, HZ = .17, DIST = 7, L = [-.4, .55, .73];
-  const circle = (R, n, cx, cy) => Array.from({ length: n }, (_, i) => [cx + R * Math.cos(i * TAU / n), cy + R * Math.sin(i * TAU / n)]);
+  const TAU = Math.PI * 2, PA = Math.PI / 9, HZ = .17, DIST = 7;
+  const L = [-.4, .55, .73], H = [-.215, .296, .931], SHAFT = [176, 180, 190];
+  const circle = (R, n) => Array.from({ length: n }, (_, i) => [R * Math.cos(i * TAU / n), R * Math.sin(i * TAU / n)]);
+  const inv = a => Math.tan(a) - a;
 
-  function makeGear(N, r, bore, holeN, holeR, holeAt, color, x) {
-    const m = 2 * r / N, tip = r + m * .9, root = r - m * 1.1, p = TAU / N, out = [];
-    for (let k = 0; k < N; k++) [[root, -.32], [tip, -.14], [tip, .14], [root, .32]].forEach(([R, f]) => { const a = (k + f) * p; out.push([R * Math.cos(a), R * Math.sin(a)]); });
-    const holes = [circle(bore, 14, 0, 0)];
-    for (let i = 0; i < holeN; i++) { const a = i * TAU / holeN; holes.push(circle(holeR, 10, holeAt * Math.cos(a), holeAt * Math.sin(a))); }
-    const sides = out.map((a, i) => { const b = out[(i + 1) % out.length], dx = b[0] - a[0], dy = b[1] - a[1], l = Math.hypot(dx, dy); return { a, b, n: [dy / l, -dx / l] }; });
-    return { N, color, x, out, holes, sides };
+  // Zahnkranz mit echten Evolventen-Flanken (20° Eingriffswinkel, Kopf- und Fußspiel, leichtes Flankenspiel)
+  function outline(N, r) {
+    const m = 2 * r / N, tip = r + m, root = r - 1.25 * m, rb = r * Math.cos(PA), p = TAU / N;
+    const half = R => .94 * Math.PI / (2 * N) + inv(PA) - inv(Math.acos(Math.min(1, rb / R)));
+    const lo = Math.max(root, rb), rs = root < rb ? [root] : [];
+    for (let i = 0; i <= 5; i++) rs.push(lo + (tip - lo) * i / 5);
+    const out = [];
+    for (let k = 0; k < N; k++) {
+      const c = k * p, pt = (R, a) => [R * Math.cos(c + a), R * Math.sin(c + a)];
+      rs.forEach(R => out.push(pt(R, -half(R))));
+      for (let i = rs.length - 1; i >= 0; i--) out.push(pt(rs[i], half(rs[i])));
+      out.push(pt(root, p / 2));
+    }
+    return out;
   }
-  const gA = makeGear(16, 1, .2, 5, .17, .6, [255, 220, 85], -.9);
-  const gB = makeGear(10, .625, .13, 3, .09, .3, [86, 213, 255], .725);
+  const walls = (ring, z0, z1, inward, col, k) => ring.map((a, i) => {
+    const b = ring[(i + 1) % ring.length], dx = b[0] - a[0], dy = b[1] - a[1], l = Math.hypot(dx, dy) || 1, s = inward ? -1 : 1;
+    return { rings: [[[a[0], a[1], z0], [b[0], b[1], z0], [b[0], b[1], z1], [a[0], a[1], z1]]], n: [s * dy / l, -s * dx / l, 0], c: [(a[0] + b[0]) / 2, (a[1] + b[1]) / 2, (z0 + z1) / 2], col, k };
+  });
+  const cap = (rings, z, nz, col, k) => ({ rings: rings.map(r => r.map(p => [p[0], p[1], z])), n: [0, 0, nz], c: [0, 0, z], col, k });
 
-  let W = 1, H = 1, dpr = 1, t = 0, ang = 0, spd = .7, tgt = .7, offX = 0, offY = 0, moved = 0;
+  // Stirnrad: Zahnkranz, optional gedrehter Steg (rw), Nabe (rh), Welle (rs)
+  function makeGear(N, r, rw, rh, rs, color, x) {
+    const out = outline(N, r), web = .06, top = HZ + .07, end = HZ + .42, f = walls(out, -HZ, HZ, false, color, 1);
+    [1, -1].forEach(s => {
+      if (rw) {
+        f.push(cap([out, circle(rw, 40)], s * HZ, s, color, 1), ...walls(circle(rw, 40), s * web, s * HZ, true, color, .7), cap([circle(rw, 40), circle(rh, 28)], s * web, s, color, .88));
+      } else f.push(cap([out, circle(rh, 28)], s * HZ, s, color, 1));
+      f.push(...walls(circle(rh, 28), s * (rw ? web : HZ), s * top, false, color, 1), cap([circle(rh, 28), circle(rs, 18)], s * top, s, color, 1),
+        ...walls(circle(rs, 18), s * top, s * end, false, SHAFT, 1), cap([circle(rs, 18)], s * end, s, SHAFT, 1));
+    });
+    return { N, x, out, faces: f };
+  }
+  const gA = makeGear(16, 1, .72, .34, .14, [226, 182, 70], -.9);
+  const gB = makeGear(10, .625, 0, .24, .1, [150, 184, 214], .725);
+
+  let W = 1, H2 = 1, dpr = 1, t = 0, ang = 0, spd = .7, tgt = .7, offX = 0, offY = 0, moved = 0;
   let drag = false, lx = 0, ly = 0, vis = true, running = false, last = 0;
 
   function render() {
@@ -1201,34 +1226,30 @@ window.localeTranslations.tr = {
     const rx = -.42 + .12 * Math.sin(t * .5) + offX;
     const sy = Math.sin(ry), cy = Math.cos(ry), sx = Math.sin(rx), cx = Math.cos(rx);
     const R = (x, y, z) => { const x1 = x * cy + z * sy, z1 = -x * sy + z * cy; return [x1, y * cx - z1 * sx, y * sx + z1 * cx]; };
-    const sc = Math.min(W, H) * .215 * (.35 + .65 * ease);
-    const P = v => { const k = DIST / (DIST - v[2]); return [W / 2 + v[0] * k * sc, H / 2 - v[1] * k * sc]; };
+    const sc = Math.min(W, H2) * .2 * (.35 + .65 * ease);
+    const P = v => { const k = DIST / (DIST - v[2]); return [W / 2 + v[0] * k * sc, H2 / 2 - v[1] * k * sc]; };
 
-    ctx.clearRect(0, 0, W, H);
-    const glow = ctx.createRadialGradient(W / 2, H / 2, 0, W / 2, H / 2, W * .5);
-    glow.addColorStop(0, 'rgba(86,213,255,.16)');
+    ctx.clearRect(0, 0, W, H2);
+    const glow = ctx.createRadialGradient(W / 2, H2 / 2, 0, W / 2, H2 / 2, W * .5);
+    glow.addColorStop(0, 'rgba(86,213,255,.1)');
     glow.addColorStop(1, 'rgba(86,213,255,0)');
     ctx.fillStyle = glow;
-    ctx.fillRect(0, 0, W, H);
+    ctx.fillRect(0, 0, W, H2);
 
     const items = [];
     [[gA, ang], [gB, Math.PI + Math.PI / gB.N - ang * gA.N / gB.N]].forEach(([g, a]) => {
       const ca = Math.cos(a), sa = Math.sin(a);
-      const loc = (p, z) => R(g.x + p[0] * ca - p[1] * sa, p[0] * sa + p[1] * ca, z);
-      const col = n => {
-        const s = .3 + .7 * Math.max(0, n[0] * L[0] + n[1] * L[1] + n[2] * L[2]);
-        return 'rgb(' + g.color.map(c => Math.round(c * s)).join() + ')';
-      };
-      const nf = R(0, 0, 1), sgn = nf[2] > 0 ? 1 : -1;
-      items.push({
-        cap: true, z: loc([0, 0], sgn * HZ)[2], fill: col([nf[0] * sgn, nf[1] * sgn, nf[2] * sgn]),
-        rings: [g.out].concat(g.holes).map(ring => ring.map(p => P(loc(p, sgn * HZ))))
-      });
-      g.sides.forEach(s => {
-        const n = R(s.n[0] * ca - s.n[1] * sa, s.n[0] * sa + s.n[1] * ca, 0);
+      const loc = p => R(g.x + p[0] * ca - p[1] * sa, p[0] * sa + p[1] * ca, p[2]);
+      g.faces.forEach(f => {
+        const n = R(f.n[0] * ca - f.n[1] * sa, f.n[0] * sa + f.n[1] * ca, f.n[2]);
         if (n[2] <= 0) return;
-        const q = [loc(s.a, HZ), loc(s.b, HZ), loc(s.b, -HZ), loc(s.a, -HZ)];
-        items.push({ z: (q[0][2] + q[1][2] + q[2][2] + q[3][2]) / 4, fill: col(n), rings: [q.map(P)] });
+        const d = Math.max(0, n[0] * L[0] + n[1] * L[1] + n[2] * L[2]);
+        const sp = Math.pow(Math.max(0, n[0] * H[0] + n[1] * H[1] + n[2] * H[2]), 28) * .6;
+        const s = (.28 + .72 * d) * f.k;
+        items.push({
+          z: loc(f.c)[2], cap: f.cap, rings: f.rings.map(r => r.map(p => P(loc(p)))),
+          fill: 'rgb(' + f.col.map(c => Math.min(255, Math.round(c * s + 255 * sp))).join() + ')'
+        });
       });
     });
     items.sort((p, q) => p.z - q.z);
@@ -1238,8 +1259,8 @@ window.localeTranslations.tr = {
       it.rings.forEach(ring => { ring.forEach((p, i) => i ? ctx.lineTo(p[0], p[1]) : ctx.moveTo(p[0], p[1])); ctx.closePath(); });
       ctx.fillStyle = it.fill;
       ctx.fill('evenodd');
-      ctx.strokeStyle = it.cap ? 'rgba(7,21,43,.75)' : it.fill;
-      ctx.lineWidth = (it.cap ? 1.3 : .8) * dpr;
+      ctx.strokeStyle = it.cap ? 'rgba(7,21,43,.55)' : it.fill;
+      ctx.lineWidth = (it.cap ? 1.1 : .8) * dpr;
       ctx.stroke();
     });
   }
@@ -1259,7 +1280,7 @@ window.localeTranslations.tr = {
     const r = cv.getBoundingClientRect();
     dpr = Math.min(window.devicePixelRatio || 1, 2);
     W = cv.width = Math.max(1, Math.round(r.width * dpr));
-    H = cv.height = Math.max(1, Math.round(r.height * dpr));
+    H2 = cv.height = Math.max(1, Math.round(r.height * dpr));
     if (!running) render();
   }
 
